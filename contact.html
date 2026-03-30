@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Session — Navgraha Shakha</title>
+<meta name="description" content="Book an astrology reading, tarot session, or coaching consultation with Rushali of Navgraha Shakha.">
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-layout {
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start;
+}
+.contact-info {}
+.contact-intro {
+  font-family:'Cormorant Garamond',serif;font-size:1.15rem;
+  line-height:1.9;color:var(--ink-dim);margin-bottom:2.5rem;
+}
+.contact-details {
+  list-style:none;display:flex;flex-direction:column;gap:1.3rem;margin-bottom:3rem;
+}
+.contact-details li {
+  display:flex;align-items:center;gap:1.2rem;
+  font-size:0.9rem;color:var(--ink-dim);
+}
+.contact-icon {
+  width:40px;height:40px;flex-shrink:0;
+  border:1px solid rgba(201,168,76,0.2);
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+}
+.availability {
+  background:var(--surface);border:1px solid rgba(201,168,76,0.12);
+  padding:1.8rem;margin-top:2rem;
+}
+.availability h3 {
+  font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;
+  letter-spacing:0.08em;color:var(--gold);margin-bottom:1.2rem;
+}
+.availability-row {
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0.6rem 0;border-bottom:1px solid rgba(201,168,76,0.06);
+  font-size:0.82rem;
+}
+.availability-row:last-child { border-bottom:none;padding-bottom:0; }
+.availability-row span:first-child { color:var(--ink-dim); }
+.availability-row span:last-child { color:var(--gold);font-size:0.75rem;letter-spacing:0.1em; }
+
+/* Form */
+.contact-form { display:flex;flex-direction:column;gap:1.2rem; }
+.form-row { display:grid;grid-template-columns:1fr 1fr;gap:1rem; }
+.form-success {
+  display:none;
+  background:rgba(201,168,76,0.06);
+  border:1px solid rgba(201,168,76,0.2);
+  padding:1.5rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;font-style:italic;
+  color:var(--gold);text-align:center;line-height:1.7;
+}
+
+/* FAQ */
+.faq-section { background:var(--surface);padding:6rem 2rem;position:relative;z-index:1; }
+.faq-inner { max-width:800px;margin:0 auto; }
+.faq-list { margin-top:3rem;display:flex;flex-direction:column;gap:0; }
+.faq-item {
+  border-bottom:1px solid rgba(201,168,76,0.1);
+  overflow:hidden;
+}
+.faq-question {
+  width:100%;background:none;border:none;text-align:left;
+  padding:1.5rem 0;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-family:'Cinzel',serif;font-size:0.95rem;font-weight:600;
+  letter-spacing:0.04em;color:var(--ink);transition:color 0.3s;
+}
+.faq-question:hover { color:var(--gold); }
+.faq-arrow {
+  font-size:1rem;color:var(--gold);flex-shrink:0;
+  transition:transform 0.3s;
+}
+.faq-item.open .faq-arrow { transform:rotate(45deg); }
+.faq-answer {
+  max-height:0;overflow:hidden;transition:max-height 0.4s ease;
+}
+.faq-answer-inner {
+  font-family:'Cormorant Garamond',serif;font-size:1.05rem;
+  line-height:1.85;color:var(--ink-dim);padding-bottom:1.5rem;
+}
+
+@media(max-width:900px){
+  .contact-layout{grid-template-columns:1fr;gap:3.5rem;}
+  .form-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<script src="common.js"></script>
+<script>document.write(getNav('Connect'));</script>
+
+<div class="page-hero">
+  <div class="page-eyebrow">Get in Touch</div>
+  <h1 class="page-title">Book a Session</h1>
+  <p class="page-subtitle">Ready to read your stars, receive a reading, or explore working together? I'd love to hear from you.</p>
+</div>
+
+<section style="background:var(--deep);padding:6rem 2rem;position:relative;z-index:1;">
+  <div class="contact-layout">
+
+    <!-- INFO -->
+    <div class="contact-info fade-in">
+      <p class="contact-intro">
+        Each session is a sacred and confidential space. I respond to all enquiries within 24–48 hours and will confirm your booking with session details and preparation notes.
+      </p>
+
+      <ul class="contact-details">
+        <li>
+          <span class="contact-icon">📍</span>
+          <span>Goa, India · Online sessions available worldwide via Zoom</span>
+        </li>
+        <li>
+          <span class="contact-icon">📧</span>
+          <span>your@email.com</span>
+        </li>
+        <li>
+          <span class="contact-icon">📱</span>
+          <span>WhatsApp: +91 XXXXX XXXXX</span>
+        </li>
+        <li>
+          <span class="contact-icon">🕐</span>
+          <span>Response within 24–48 hours</span>
+        </li>
+        <li>
+          <span class="contact-icon">📸</span>
+          <span>Instagram: @navgrahashakha</span>
+        </li>
+      </ul>
+
+      <div class="availability">
+        <h3>✦ Current Availability</h3>
+        <div class="availability-row">
+          <span>Birth Chart Readings</span>
+          <span>Open</span>
+        </div>
+        <div class="availability-row">
+          <span>Tarot Sessions</span>
+          <span>Open</span>
+        </div>
+        <div class="availability-row">
+          <span>Coaching (Monthly)</span>
+          <span>2 Spots Open</span>
+        </div>
+        <div class="availability-row">
+          <span>Digital Marketing</span>
+          <span>Enquire</span>
+        </div>
+        <div class="availability-row">
+          <span>In-person (Goa)</span>
+          <span>By Request</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="fade-in">
+      <form class="contact-form" onsubmit="handleSubmit(event)" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="First name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">WhatsApp / Phone (optional)</label>
+          <input type="text" class="form-input" placeholder="+91 XXXXX XXXXX">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service</label>
+          <select class="form-select">
+            <option value="">Select a service...</option>
+            <optgroup label="Astro & Tarot">
+              <option>Birth Chart Reading (60 min)</option>
+              <option>Tarot Reading (30 min)</option>
+              <option>Tarot Reading (60 min)</option>
+              <option>Saturn Return Guidance (90 min)</option>
+              <option>Psycho-Spiritual Coaching (Monthly)</option>
+              <option>Synastry / Relationship Chart (75 min)</option>
+              <option>Annual Solar Return (45 min)</option>
+            </optgroup>
+            <optgroup label="Digital Marketing">
+              <option>Social Media Strategy</option>
+              <option>Meta Ads Consulting</option>
+              <option>Brand & Content Creation</option>
+            </optgroup>
+            <option>General Enquiry / Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Date of Birth (for chart readings)</label>
+          <input type="text" class="form-input" placeholder="DD/MM/YYYY — include time if known">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Message</label>
+          <textarea class="form-textarea" placeholder="Tell me a little about what you're seeking, what's on your mind, or any questions you have..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Preferred Session Format</label>
+          <select class="form-select">
+            <option>Online via Zoom</option>
+            <option>In Person (Goa only)</option>
+            <option>No preference</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit">Send Your Message →</button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        ✦ Thank you for reaching out.<br>
+        I'll be in touch within 24–48 hours to confirm your session.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <div class="faq-inner">
+    <div class="section-eyebrow">Common Questions</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I need to know my exact birth time for a chart reading?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Birth time is ideal — especially for determining your rising sign and house placements. However, a reading is still rich and valuable without it. Just share what you know and I'll work with it.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are sessions recorded?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes — most sessions are recorded via Zoom so you can return to the material. You'll receive the recording link after our session, along with any relevant notes or charts.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I pay?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Payment details will be shared upon booking confirmation. I accept UPI, bank transfer (India), and PayPal or Wise for international clients.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I book a session as a gift?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Absolutely. Just mention it in your message and I'll prepare a gift confirmation for you to share. The recipient can then schedule their session at their convenience.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is psycho-spiritual coaching and how is it different from a reading?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">A reading is a one-time session focused on insight and reflection. Coaching is an ongoing relationship — typically monthly sessions over 3–6 months — where we work together on specific inner patterns, shadow material, and soul-aligned goals using astrology, Jungian frameworks, and other tools.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const answer = item.querySelector('.faq-answer');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-answer').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+</script>
+<script>document.write(getFooter());</script>
+</body>
+</html>

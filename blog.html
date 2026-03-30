@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Navgraha Shakha</title>
+<meta name="description" content="Writings on astrology, tarot, Jungian psychology, and psycho-spiritual growth by Rushali.">
+<link rel="stylesheet" href="style.css">
+<style>
+.blog-filters {
+  max-width:1100px;margin:0 auto 3rem;
+  display:flex;gap:0.8rem;flex-wrap:wrap;
+}
+.filter-btn {
+  font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;
+  padding:0.45rem 1.1rem;border:1px solid rgba(201,168,76,0.25);
+  color:var(--ink-faint);background:none;cursor:pointer;transition:all 0.3s;
+}
+.filter-btn:hover, .filter-btn.active { border-color:var(--gold);color:var(--gold); }
+
+.blog-grid {
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+}
+.blog-card {
+  background:var(--surface);
+  border:1px solid rgba(201,168,76,0.1);
+  overflow:hidden;transition:border-color 0.3s;
+  display:flex;flex-direction:column;
+}
+.blog-card:hover { border-color:rgba(201,168,76,0.3); }
+.blog-card-img {
+  width:100%;aspect-ratio:16/9;
+  background:var(--surface2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.8rem;
+  border-bottom:1px solid rgba(201,168,76,0.08);
+  transition:background 0.3s;
+}
+.blog-card:hover .blog-card-img { background:var(--surface3); }
+.blog-card-body { padding:1.8rem;flex:1;display:flex;flex-direction:column; }
+.blog-tag {
+  font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.7rem;display:block;
+}
+.blog-card-title {
+  font-family:'Cinzel',serif;font-size:0.95rem;font-weight:600;
+  letter-spacing:0.03em;color:var(--ink);line-height:1.55;margin-bottom:0.8rem;
+}
+.blog-excerpt {
+  font-family:'Cormorant Garamond',serif;font-size:1rem;
+  line-height:1.75;color:var(--ink-dim);margin-bottom:1.2rem;flex:1;
+}
+.blog-footer {
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1.2rem;border-top:1px solid rgba(201,168,76,0.08);
+}
+.blog-meta { font-size:0.68rem;letter-spacing:0.1em;color:var(--ink-faint); }
+.blog-read-more {
+  font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);text-decoration:none;
+  border-bottom:1px solid transparent;transition:border-color 0.3s;
+}
+.blog-read-more:hover { border-color:var(--gold); }
+
+/* Featured post */
+.featured-post {
+  max-width:1100px;margin:0 auto 4rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border:1px solid rgba(201,168,76,0.15);
+  background:var(--surface);
+  overflow:hidden;
+}
+.featured-post-img {
+  background:var(--surface2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:5rem;min-height:300px;
+  border-right:1px solid rgba(201,168,76,0.08);
+}
+.featured-post-body { padding:3rem; }
+.featured-label {
+  font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1rem;display:block;
+}
+.featured-post-body h2 {
+  font-family:'Cinzel',serif;font-size:1.3rem;font-weight:600;
+  letter-spacing:0.04em;color:var(--ink);margin-bottom:1rem;line-height:1.4;
+}
+.featured-post-body p {
+  font-family:'Cormorant Garamond',serif;font-size:1.1rem;
+  line-height:1.85;color:var(--ink-dim);margin-bottom:1.5rem;
+}
+.featured-post-meta { font-size:0.72rem;letter-spacing:0.12em;color:var(--ink-faint);margin-bottom:1.5rem; }
+
+/* Coming soon card */
+.coming-soon {
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:0.5rem;
+  min-height:200px;
+  opacity:0.5;
+}
+.coming-soon span { font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint); }
+
+/* Newsletter */
+.newsletter-section {
+  background:var(--surface2);
+  border-top:1px solid rgba(201,168,76,0.1);
+  border-bottom:1px solid rgba(201,168,76,0.1);
+  padding:5rem 2rem;
+  text-align:center;
+  position:relative;z-index:1;margin-top:6rem;
+}
+.newsletter-section h2 {
+  font-family:'Cinzel',serif;font-size:clamp(1.4rem,3vw,2rem);
+  font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:0.8rem;
+}
+.newsletter-section p {
+  font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;
+  color:var(--ink-dim);margin-bottom:2rem;
+}
+.newsletter-form {
+  display:flex;gap:0;max-width:480px;margin:0 auto;
+}
+.newsletter-form input {
+  flex:1;background:var(--surface);border:1px solid rgba(201,168,76,0.2);
+  border-right:none;color:var(--ink);padding:0.85rem 1.2rem;
+  font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;
+  outline:none;transition:border-color 0.3s;
+}
+.newsletter-form input:focus { border-color:rgba(201,168,76,0.5); }
+.newsletter-form input::placeholder { color:var(--ink-faint); }
+.newsletter-form button {
+  background:var(--gold);color:var(--deep);border:none;
+  padding:0.85rem 1.5rem;font-family:'Jost',sans-serif;font-size:0.78rem;
+  font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;
+  transition:background 0.3s;white-space:nowrap;
+}
+.newsletter-form button:hover { background:var(--gold-light); }
+
+@media(max-width:900px){
+  .blog-grid{grid-template-columns:1fr;}
+  .featured-post{grid-template-columns:1fr;}
+  .featured-post-img{min-height:180px;border-right:none;border-bottom:1px solid rgba(201,168,76,0.08);}
+  .newsletter-form{flex-direction:column;}
+  .newsletter-form input{border-right:1px solid rgba(201,168,76,0.2);border-bottom:none;}
+}
+</style>
+</head>
+<body>
+<script src="common.js"></script>
+<script>document.write(getNav('Blog'));</script>
+
+<div class="page-hero">
+  <div class="page-eyebrow">Writings &amp; Musings</div>
+  <h1 class="page-title">The Cosmic Journal</h1>
+  <p class="page-subtitle">Reflections on astrology, tarot, Jungian psychology, and the art of living soul-first.</p>
+</div>
+
+<section style="background:var(--deep);padding:6rem 2rem;position:relative;z-index:1;">
+
+  <!-- Featured Post -->
+  <div class="featured-post fade-in">
+    <div class="featured-post-img">☽</div>
+    <div class="featured-post-body">
+      <span class="featured-label">✦ Featured Post</span>
+      <h2>Understanding Your Moon Sign: The Hidden Emotional Self</h2>
+      <div class="featured-post-meta">Astrology · 8 min read</div>
+      <p>The Moon in your chart reveals how you feel, nurture, and find safety. While the Sun shows who you are becoming, the Moon shows who you already are — in the quiet, unguarded moments. Exploring what it means to truly live your lunar nature with consciousness and compassion.</p>
+      <a href="blog-post.html" class="btn-secondary" style="display:inline-block;">Read the Full Post →</a>
+    </div>
+  </div>
+
+  <!-- Filter buttons -->
+  <div class="blog-filters">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Astrology</button>
+    <button class="filter-btn">Tarot</button>
+    <button class="filter-btn">Jungian Psychology</button>
+    <button class="filter-btn">Coaching</button>
+    <button class="filter-btn">Digital</button>
+  </div>
+
+  <!-- Blog grid -->
+  <div class="blog-grid">
+    <div class="blog-card fade-in">
+      <div class="blog-card-img">☽</div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Astrology</span>
+        <div class="blog-card-title">Understanding Your Moon Sign: The Hidden Emotional Self</div>
+        <p class="blog-excerpt">The Moon in your chart reveals how you feel, nurture, and find safety — in the quiet, unguarded moments.</p>
+        <div class="blog-footer">
+          <span class="blog-meta">8 min read</span>
+          <a href="blog-post.html" class="blog-read-more">Read More →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card fade-in">
+      <div class="blog-card-img">🌿</div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Jungian Psychology</span>
+        <div class="blog-card-title">Tarot &amp; the Shadow: Meeting Your Inner Archetypes</div>
+        <p class="blog-excerpt">Carl Jung believed we carry everything within us. How tarot becomes a mirror for the parts of ourselves we prefer not to see.</p>
+        <div class="blog-footer">
+          <span class="blog-meta">Coming Soon</span>
+          <span class="blog-read-more" style="opacity:0.4;cursor:default;">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card fade-in">
+      <div class="blog-card-img">♄</div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Coaching</span>
+        <div class="blog-card-title">Saturn Returns &amp; the Call to Grow Up Spiritually</div>
+        <p class="blog-excerpt">Why your Saturn Return is one of the most important initiations of adult life — and how to navigate it with grace and self-compassion.</p>
+        <div class="blog-footer">
+          <span class="blog-meta">Coming Soon</span>
+          <span class="blog-read-more" style="opacity:0.4;cursor:default;">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card fade-in">
+      <div class="blog-card-img">✦</div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Astrology</span>
+        <div class="blog-card-title">The Nodes of the Moon: Your Soul's Karmic Direction</div>
+        <p class="blog-excerpt">Rahu and Ketu — the shadow planets — hold the key to your soul's evolutionary path across lifetimes.</p>
+        <div class="blog-footer">
+          <span class="blog-meta">Coming Soon</span>
+          <span class="blog-read-more" style="opacity:0.4;cursor:default;">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card fade-in">
+      <div class="blog-card-img">🎴</div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Tarot</span>
+        <div class="blog-card-title">The Major Arcana as a Journey of Individuation</div>
+        <p class="blog-excerpt">Jung's process of individuation mapped onto the 22 Major Arcana — from the Fool's leap of faith to the World's integration.</p>
+        <div class="blog-footer">
+          <span class="blog-meta">Coming Soon</span>
+          <span class="blog-read-more" style="opacity:0.4;cursor:default;">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card fade-in">
+      <div class="blog-card-img">📡</div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Digital</span>
+        <div class="blog-card-title">How to Market Your Spiritual Practice Without Selling Your Soul</div>
+        <p class="blog-excerpt">Growing your practice online while staying true to your integrity, your values, and your calling.</p>
+        <div class="blog-footer">
+          <span class="blog-meta">Coming Soon</span>
+          <span class="blog-read-more" style="opacity:0.4;cursor:default;">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter-section">
+  <h2>✦ Join the Cosmic Letters</h2>
+  <p>Monthly musings on astrology, tarot, and the inner life — delivered to your inbox around the new moon.</p>
+  <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+    <input type="email" placeholder="your@email.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="nl-success" style="display:none;margin-top:1rem;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);">You're in ✦ Watch for the next new moon letter.</p>
+</div>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  document.getElementById('nl-success').style.display = 'block';
+  e.target.querySelector('input').value = '';
+}
+// Filter buttons (visual only for now)
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+<script>document.write(getFooter());</script>
+</body>
+</html>
