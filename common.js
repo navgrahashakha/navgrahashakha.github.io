@@ -4,7 +4,6 @@ function getNav(activePage) {
     { href: 'index.html', label: 'Home' },
     { href: 'about.html', label: 'About' },
     { href: 'services.html', label: 'Services' },
-    { href: 'digital.html', label: 'Digital' },
     { href: 'blog.html', label: 'Blog' },
     { href: 'contact.html', label: 'Connect' },
   ];
@@ -13,7 +12,7 @@ function getNav(activePage) {
   ).join('');
   return `
 <nav>
-  <a href="index.html" class="nav-logo">Navgraha Shakha <small>Astrology · Tarot · Coaching</small></a>
+  <a href="index.html" class="nav-logo">Navgraha Shakha <small>Astrology · Tarot · Psycho-Spiritual Coaching</small></a>
   <ul class="nav-links">${links}</ul>
   <a href="contact.html" class="nav-cta">Book a Session</a>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -38,7 +37,6 @@ function getFooter() {
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="digital.html">Digital</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Connect</a></li>
     </ul>
