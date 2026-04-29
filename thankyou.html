@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Navgraha Shakha</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<style>
+.thankyou-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+.thankyou-card {
+  max-width: 620px;
+  width: 100%;
+  text-align: center;
+  padding: 5rem 4rem;
+  background: linear-gradient(145deg, rgba(49,20,102,0.85), rgba(37,16,80,0.9));
+  border: 1px solid rgba(201,168,76,0.25);
+  position: relative;
+  backdrop-filter: blur(12px);
+}
+/* Corner ornaments */
+.thankyou-card::before {
+  content: '';
+  position: absolute; top: 12px; left: 12px;
+  width: 30px; height: 30px;
+  border-top: 1px solid rgba(201,168,76,0.5);
+  border-left: 1px solid rgba(201,168,76,0.5);
+}
+.thankyou-card::after {
+  content: '';
+  position: absolute; bottom: 12px; right: 12px;
+  width: 30px; height: 30px;
+  border-bottom: 1px solid rgba(201,168,76,0.5);
+  border-right: 1px solid rgba(201,168,76,0.5);
+}
+.thankyou-symbol {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  animation: floatSymbol 4s ease-in-out infinite;
+}
+@keyframes floatSymbol {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.thankyou-divider {
+  width: 80px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6), transparent);
+  margin: 1.5rem auto;
+}
+.thankyou-eyebrow {
+  font-size: 0.65rem; font-weight: 400; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1rem; display: block;
+}
+.thankyou-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700; letter-spacing: 0.06em;
+  color: var(--ink); margin-bottom: 1.2rem;
+  text-shadow: 0 0 60px rgba(201,168,76,0.2);
+}
+.thankyou-title span {
+  display: block;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.thankyou-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-style: italic;
+  color: var(--ink-dim); line-height: 1.85;
+  margin-bottom: 0.8rem;
+}
+.thankyou-note {
+  font-size: 0.8rem; letter-spacing: 0.08em;
+  color: var(--ink-faint); margin-bottom: 2.5rem;
+}
+.thankyou-actions {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+.thankyou-social {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(201,168,76,0.12);
+}
+.thankyou-social p {
+  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink-faint); margin-bottom: 1.2rem;
+}
+.social-mini {
+  display: flex; gap: 0.8rem; justify-content: center;
+}
+.social-mini a {
+  font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 0.45rem 1rem; border: 1px solid rgba(201,168,76,0.2);
+  color: var(--ink-dim); text-decoration: none; transition: all 0.3s;
+}
+.social-mini a:hover { border-color: rgba(201,168,76,0.5); color: var(--gold); }
+
+@media (max-width: 600px) {
+  .thankyou-card { padding: 3.5rem 2rem; }
+}
+</style>
+</head>
+<body>
+<script src="common.js"></script>
+<script>document.write(getNav(''));</script>
+
+<div class="thankyou-wrap">
+  <div class="thankyou-card">
+    <span class="thankyou-symbol">✦</span>
+    <span class="thankyou-eyebrow">Message Received</span>
+    <h1 class="thankyou-title">
+      Thank You<br>
+      <span>for Reaching Out</span>
+    </h1>
+    <div class="thankyou-divider"></div>
+    <p class="thankyou-text">
+      Your message has been received. I'll be in touch within 24–48 hours to confirm your session details.
+    </p>
+    <p class="thankyou-note">
+      In the meantime, feel free to explore the blog or follow along on Instagram for weekly cosmic musings.
+    </p>
+    <div class="thankyou-actions">
+      <a href="index.html" class="btn-primary">Return Home</a>
+      <a href="blog.html" class="btn-secondary">Read the Blog</a>
+    </div>
+    <div class="thankyou-social">
+      <p>Follow Along</p>
+      <div class="social-mini">
+        <a href="https://instagram.com/navgrahashakha" target="_blank">Instagram</a>
+        <a href="https://youtube.com/@navgrahashakha" target="_blank">YouTube</a>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>document.write(getWhatsApp());</script>
+</body>
+</html>
