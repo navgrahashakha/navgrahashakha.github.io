@@ -4,118 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Rushali — Navgraha Shakha</title>
-<meta name="description" content="Meet Rushali, astrologer, tarot reader, and psycho-spiritual coach based in Goa, India.">
 <link rel="stylesheet" href="style.css">
 <style>
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 5rem;
-  align-items: start;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+.about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; max-width: 1100px; margin: 0 auto; }
 .about-image-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 3/4;
-  background: var(--surface2);
-  border: 1px solid rgba(196,176,232,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5rem;
-  color: var(--lavender-mid);
-  opacity: 0.15;
-  overflow: hidden;
+  position: relative; width: 100%; aspect-ratio: 3/4;
+  background: var(--surface2); border: 1px solid rgba(90,62,138,0.15);
+  display: flex; align-items: center; justify-content: center; font-size: 5rem;
+  color: var(--lavender-faint); overflow: hidden;
 }
-.about-image-corner {
-  position: absolute;
-  width: 24px; height: 24px;
-  border-color: var(--lavender-mid);
-  opacity: 0.5;
-}
-.about-image-corner.tl { top:-8px;left:-8px;border-top:1px solid;border-left:1px solid; }
-.about-image-corner.tr { top:-8px;right:-8px;border-top:1px solid;border-right:1px solid; }
-.about-image-corner.bl { bottom:-8px;left:-8px;border-bottom:1px solid;border-left:1px solid; }
-.about-image-corner.br { bottom:-8px;right:-8px;border-bottom:1px solid;border-right:1px solid; }
-.photo-note {
-  position: absolute;
-  bottom:1rem;left:0;right:0;text-align:center;
-  font-size:0.65rem;color:var(--ink-faint);letter-spacing:0.1em;
-  font-family:'Jost',sans-serif;
-}
-.about-text p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
-  line-height: 1.95;
-  color: var(--ink-dim);
-  margin-bottom: 1.5rem;
-}
-.about-text p strong { color: var(--ink); font-weight: 600; }
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(196,176,232,0.2);
-}
-.stat-item { text-align: center; }
-.stat-num { font-family:'Cinzel',serif;font-size:2.2rem;font-weight:700;color:var(--lavender-mid);display:block; }
+.corner { position: absolute; width: 24px; height: 24px; border-color: rgba(90,62,138,0.3); }
+.corner.tl { top:-8px;left:-8px;border-top:1px solid;border-left:1px solid; }
+.corner.tr { top:-8px;right:-8px;border-top:1px solid;border-right:1px solid; }
+.corner.bl { bottom:-8px;left:-8px;border-bottom:1px solid;border-left:1px solid; }
+.corner.br { bottom:-8px;right:-8px;border-bottom:1px solid;border-right:1px solid; }
+.photo-note { position:absolute;bottom:1rem;left:0;right:0;text-align:center;font-size:0.65rem;color:var(--ink-faint);letter-spacing:0.1em; }
+.about-text p { font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.95;color:var(--ink-dim);margin-bottom:1.5rem; }
+.about-text p strong { color:var(--ink);font-weight:600; }
+.about-stats { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(90,62,138,0.1); }
+.stat-item { text-align:center; }
+.stat-num { font-family:'Cinzel',serif;font-size:2.2rem;font-weight:700;color:var(--gold);display:block; }
 .stat-label { font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.3rem; }
 
-/* Approach section */
-.approach-section { background: var(--surface); padding: 6rem 2rem; position:relative;z-index:1; }
-.approach-grid {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem;
-  margin-top: 3rem;
-}
-.approach-card {
-  background: var(--surface2);
-  border: 1px solid rgba(196,176,232,0.12);
-  padding: 2.5rem 2rem;
-  transition: border-color 0.3s;
-}
-.approach-card:hover { border-color: rgba(196,176,232,0.35); }
-.approach-num {
-  font-family:'Cinzel',serif;
-  font-size:2.5rem;font-weight:700;
-  color:rgba(196,176,232,0.2);
-  margin-bottom:1rem;display:block;
-}
-.approach-card h3 {
-  font-family:'Cinzel',serif;font-size:1rem;font-weight:600;
-  letter-spacing:0.05em;color:var(--ink);margin-bottom:0.8rem;
-}
-.approach-card p {
-  font-family:'Cormorant Garamond',serif;font-size:1.05rem;
-  line-height:1.8;color:var(--ink-dim);
-}
+.approach-section { background:var(--surface);padding:6rem 2rem;position:relative;z-index:1; }
+.approach-grid { max-width:1100px;margin:3rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem; }
+.approach-card { background:var(--white);border:1px solid rgba(90,62,138,0.1);padding:2.5rem 2rem;transition:all 0.3s;box-shadow:0 2px 10px rgba(90,62,138,0.04); }
+.approach-card:hover { border-color:rgba(90,62,138,0.28);box-shadow:0 4px 20px rgba(90,62,138,0.08); }
+.approach-num { font-family:'Cinzel',serif;font-size:2.5rem;font-weight:700;color:rgba(90,62,138,0.1);margin-bottom:1rem;display:block; }
+.approach-card h3 { font-family:'Cinzel',serif;font-size:1rem;font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:0.8rem; }
+.approach-card p { font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.8;color:var(--ink-dim); }
 
-/* Influences */
-.influences { padding: 6rem 2rem; position:relative;z-index:1; }
-.influences-inner { max-width: 900px; margin: 0 auto; }
-.influences-list {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem;
-}
-.influence-item {
-  display: flex; align-items: center; gap: 1rem;
-  padding: 1.2rem 1.5rem;
-  border: 1px solid rgba(196,176,232,0.12);
-  background: var(--surface);
-  transition: border-color 0.3s;
-}
-.influence-item:hover { border-color: rgba(196,176,232,0.35); }
-.influence-item span:first-child { font-size: 1.5rem; }
-.influence-item-text h4 { font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:0.2rem; }
-.influence-item-text p { font-size:0.8rem;color:var(--ink-faint);letter-spacing:0.05em; }
+.influences { padding:6rem 2rem;position:relative;z-index:1; }
+.influences-list { display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem; }
+.influence-item { display:flex;align-items:center;gap:1rem;padding:1.2rem 1.5rem;border:1px solid rgba(90,62,138,0.1);background:var(--white);transition:border-color 0.3s;box-shadow:0 1px 8px rgba(90,62,138,0.04); }
+.influence-item:hover { border-color:rgba(90,62,138,0.25); }
+.influence-item span:first-child { font-size:1.5rem; }
+.influence-item h4 { font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:0.2rem; }
+.influence-item p { font-size:0.8rem;color:var(--ink-faint);letter-spacing:0.04em; }
 
 @media(max-width:900px){
-  .about-grid{grid-template-columns:1fr;gap:3rem;}
-  .approach-grid{grid-template-columns:1fr;}
-  .influences-list{grid-template-columns:1fr;}
+  .about-grid { grid-template-columns:1fr;gap:3rem; }
+  .approach-grid { grid-template-columns:1fr; }
+  .influences-list { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -126,7 +56,7 @@
 <div class="page-hero">
   <div class="page-eyebrow">The Practitioner</div>
   <h1 class="page-title">About Rushali</h1>
-  <p class="page-subtitle">Astrologer, tarot reader, and psycho-spiritual coach rooted in Goa, India.</p>
+  <p class="page-subtitle">Astrologer, tarot reader, and spiritual coach rooted in Goa, India.</p>
 </div>
 
 <section style="background:var(--deep);padding:6rem 2rem;position:relative;z-index:1;">
@@ -136,22 +66,20 @@
         ☽
         <div class="photo-note">[ Add your photo here ]</div>
       </div>
-      <div class="about-image-corner tl"></div>
-      <div class="about-image-corner tr"></div>
-      <div class="about-image-corner bl"></div>
-      <div class="about-image-corner br"></div>
+      <div class="corner tl"></div><div class="corner tr"></div>
+      <div class="corner bl"></div><div class="corner br"></div>
     </div>
     <div class="about-text fade-in">
       <div class="section-eyebrow">My Story</div>
       <h2 class="section-title">Bridging Stars &amp; Soul</h2>
       <p>
-        I am <strong>Rushali</strong>, an astrologer, tarot reader, and psycho-spiritual coach rooted in Goa, India. My practice weaves together the ancient language of the <strong>nine planets (Navgraha)</strong> with the archetypal wisdom of Jungian psychology.
+        I am <strong>Rushali</strong>, an astrologer, a tarot reader, and a spiritual coach rooted in Goa, India. My practice weaves together the ancient language of the nine planets — the <strong>Navgraha</strong> — with the archetypal wisdom of tarot.
       </p>
       <p>
-        My journey into astrology began long before it became a vocation — it started as a deep fascination with patterns, cycles, and the quiet intelligence behind life's timing. Over years of study and practice, I found that the birth chart is not a fixed fate but a living map — one that shifts meaning as we grow.
+        My journey into astrology began long before it became a vocation. It started as a deep fascination with patterns, cycles, and the quiet intelligence behind life's timing. Over years of study and practice, I found that the birth chart is not a fixed fate but a living map — one that shifts meaning as we grow. It is a blend of free will and what is destined.
       </p>
       <p>
-        Alongside astrology, I fell in love with tarot as a language of the unconscious. The cards offered something charts couldn't — immediacy, imagery, and a direct line to the intuitive mind. Together, these two tools became the foundation of my work.
+        Alongside astrology, I fell in love with tarot as a language of the soul. The cards offered something charts couldn't — immediacy, imagery, and a direct line to the intuitive mind. Together, these two tools became the foundation of my work.
       </p>
       <p>
         Today, my practice centres on <strong>Vedic astrology</strong> and <strong>tarot</strong> — two ancient tools that, together, offer both the broad cosmic map and the intimate symbolic mirror we need to navigate life with clarity and intention.
@@ -183,7 +111,7 @@
     <div class="approach-card fade-in">
       <span class="approach-num">01</span>
       <h3>Cosmos as Mirror</h3>
-      <p>I read the chart not as prediction but as reflection — a way of seeing your own patterns, gifts, and wounds with more compassion and clarity.</p>
+      <p>I read the chart not as fixed prediction, but as a living reflection — a way of seeing your patterns, gifts, and cycles with more compassion and clarity.</p>
     </div>
     <div class="approach-card fade-in">
       <span class="approach-num">02</span>
@@ -192,65 +120,47 @@
     </div>
     <div class="approach-card fade-in">
       <span class="approach-num">03</span>
-      <h3>Wholeness as the Goal</h3>
-      <p>Whether through a chart reading, a tarot session, or ongoing coaching, the aim is always integration — more of you, expressed more fully.</p>
+      <h3>Free Will &amp; Destiny</h3>
+      <p>I believe life is a dance between what is written in the stars and the choices we make. My readings honour both — offering insight without taking away your agency.</p>
     </div>
   </div>
 </div>
 
-<div class="influences">
-  <div class="influences-inner">
+<div class="influences" style="background:var(--deep);">
+  <div style="max-width:900px;margin:0 auto;">
     <div class="section-eyebrow">Foundations</div>
     <h2 class="section-title">Influences &amp; Lineages</h2>
-    <p class="section-subtitle">The traditions, thinkers, and systems that have shaped my practice.</p>
+    <p class="section-subtitle">The traditions and systems that have shaped my practice.</p>
     <div class="influences-list">
       <div class="influence-item fade-in">
         <span>☉</span>
-        <div class="influence-item-text">
-          <h4>Vedic Astrology</h4>
-          <p>Jyotish — the ancient Indian science of light</p>
-        </div>
-      </div>
-      <div class="influence-item fade-in">
-        <span>🌙</span>
-        <div class="influence-item-text">
-          <h4>Lunar Astrology</h4>
-          <p>Moon cycles, emotional rhythms &amp; tides</p>
-        </div>
+        <div><h4>BPHS Vedic Astrology</h4><p>Brihat Parashara Hora Shastra — the foundational classical text</p></div>
       </div>
       <div class="influence-item fade-in">
         <span>☽</span>
-        <div class="influence-item-text">
-          <h4>Tarot — Rider-Waite &amp; Thoth</h4>
-          <p>Western esoteric &amp; archetypal traditions</p>
-        </div>
+        <div><h4>Tarot — Rider-Waite Tradition</h4><p>Western symbolic &amp; archetypal traditions</p></div>
       </div>
       <div class="influence-item fade-in">
         <span>✦</span>
-        <div class="influence-item-text">
-          <h4>Psycho-Spiritual Coaching</h4>
-          <p>Soul-aligned transformation &amp; inner work</p>
-        </div>
-      </div>
-      <div class="influence-item fade-in">
-        <span>♄</span>
-        <div class="influence-item-text">
-          <h4>Hellenistic Astrology</h4>
-          <p>Ancient Greek planetary wisdom</p>
-        </div>
+        <div><h4>Nakshatras &amp; Lunar Astrology</h4><p>The 27 lunar mansions of Vedic tradition</p></div>
       </div>
       <div class="influence-item fade-in">
         <span>🌿</span>
-        <div class="influence-item-text">
-          <h4>Intuitive Tarot</h4>
-          <p>Symbolic, story-based &amp; archetypal readings</p>
-        </div>
+        <div><h4>Intuitive Tarot</h4><p>Symbolic, story-based &amp; soul-centred readings</p></div>
+      </div>
+      <div class="influence-item fade-in">
+        <span>♄</span>
+        <div><h4>Karmic &amp; Dasha Systems</h4><p>Vimshottari Dasha &amp; planetary period cycles</p></div>
+      </div>
+      <div class="influence-item fade-in">
+        <span>💍</span>
+        <div><h4>Vedic Compatibility (Kundali)</h4><p>Ashtakoot matching &amp; relationship astrology</p></div>
       </div>
     </div>
   </div>
 </div>
 
-<div style="background:var(--surface2);border-top:1px solid rgba(196,176,232,0.15);padding:5rem 2rem;text-align:center;position:relative;z-index:1;">
+<div style="background:var(--surface2);border-top:1px solid rgba(90,62,138,0.1);padding:5rem 2rem;text-align:center;position:relative;z-index:1;">
   <h2 style="font-family:'Cinzel',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:1rem;">Ready to Work Together?</h2>
   <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--ink-dim);margin-bottom:2.5rem;">Book a session and begin your journey inward.</p>
   <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">

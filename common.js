@@ -1,4 +1,3 @@
-// Shared navigation and footer for all pages
 function getNav(activePage) {
   const pages = [
     { href: 'index.html', label: 'Home' },
@@ -12,7 +11,7 @@ function getNav(activePage) {
   ).join('');
   return `
 <nav>
-  <a href="index.html" class="nav-logo">Navgraha Shakha <small>Astrology · Tarot · Cosmic Guidance</small></a>
+  <a href="index.html" class="nav-logo">Navgraha Shakha <small>Astrology · Tarot · Spiritual Coaching</small></a>
   <ul class="nav-links">${links}</ul>
   <a href="contact.html" class="nav-cta">Book a Session</a>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -21,7 +20,7 @@ function getNav(activePage) {
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   ${pages.map(p => `<a href="${p.href}">${p.label}</a>`).join('')}
-  <a href="contact.html" style="color:var(--gold)">Book a Session →</a>
+  <a href="contact.html" style="color:var(--lavender);font-weight:500;">Book a Session →</a>
 </div>`;
 }
 
@@ -29,9 +28,15 @@ function getFooter() {
   return `
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo-wrap">
+    <div>
       <a href="index.html" class="footer-logo">Navgraha Shakha</a>
-      <div class="footer-tagline">Where the stars meet the soul</div>
+      <div class="footer-tagline">Astrology · Tarot · Spiritual Coaching</div>
+      <div class="footer-contact">
+        <a href="mailto:navgrahashakha@gmail.com">navgrahashakha@gmail.com</a>
+        <a href="mailto:info@navgrahashakha.com">info@navgrahashakha.com</a>
+        <a href="https://wa.me/91XXXXXXXXXX">WhatsApp: +91 XXXXX XXXXX</a>
+        <span style="font-size:0.75rem;color:var(--ink-faint);">Goa, India · Sessions via Zoom &amp; Google Meet</span>
+      </div>
     </div>
     <ul class="footer-links">
       <li><a href="index.html">Home</a></li>
@@ -39,15 +44,20 @@ function getFooter() {
       <li><a href="services.html">Services</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Connect</a></li>
+      <li><a href="#privacy">Privacy Policy</a></li>
     </ul>
     <div class="footer-right">
       <div class="footer-copy">© 2025 Navgraha Shakha · All Rights Reserved</div>
       <div class="footer-social">
-        <a href="#">Instagram</a>
-        <a href="#">YouTube</a>
-        <a href="#">WhatsApp</a>
+        <a href="https://instagram.com/navgrahashakha" target="_blank">Instagram</a>
+        <a href="https://youtube.com/@navgrahashakha" target="_blank">YouTube</a>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
       </div>
     </div>
+  </div>
+  <div class="footer-privacy" id="privacy">
+    <strong style="color:var(--ink-dim);display:block;margin-bottom:0.5rem;font-size:0.75rem;letter-spacing:0.1em;">Privacy Policy</strong>
+    Navgraha Shakha collects personal information (name, email, phone, birth details) solely for the purpose of providing astrology, tarot, and spiritual coaching services. Your data is never sold, shared with third parties, or used for marketing without your consent. All session information and personal details are kept strictly confidential. By submitting a form on this website, you consent to Rushali / Navgraha Shakha storing and using your information to respond to your enquiry and deliver booked services. You may request deletion of your data at any time by writing to <a href="mailto:navgrahashakha@gmail.com">navgrahashakha@gmail.com</a>.
   </div>
 </footer>`;
 }
@@ -56,7 +66,6 @@ function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
 }
 
-// Fade in on scroll
 function initFade() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

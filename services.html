@@ -3,112 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Astro &amp; Tarot Services — Navgraha Shakha</title>
-<meta name="description" content="Birth chart readings, tarot sessions, Saturn return guidance, and psycho-spiritual coaching with Rushali.">
+<title>Services — Navgraha Shakha</title>
+<meta name="description" content="Birth chart readings, tarot sessions, relationship readings, financial readings and spiritual coaching with Rushali.">
 <link rel="stylesheet" href="style.css">
 <style>
 .services-grid {
   max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(3,1fr);
-  gap: 1.5px; background: rgba(196,176,232,0.08);
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
 }
 .service-card {
-  background: var(--deep);
-  padding: 3rem 2rem;
-  position: relative; overflow: hidden;
-  transition: background 0.4s;
+  background: var(--white); border: 1px solid rgba(90,62,138,0.1);
+  padding: 2.5rem 2rem; transition: all 0.3s;
+  box-shadow: 0 2px 12px rgba(90,62,138,0.04);
+  display: flex; flex-direction: column;
 }
-.service-card::after {
-  content: '';
-  position: absolute;
-  bottom:0;left:0;right:0;height:2px;
-  background: linear-gradient(90deg,transparent,var(--gold),transparent);
-  opacity:0;transition:opacity 0.4s;
-}
-.service-card:hover { background: var(--surface); }
-.service-card:hover::after { opacity:1; }
-.service-icon { font-size:2.2rem;margin-bottom:1.5rem;display:block; }
+.service-card:hover { border-color: rgba(90,62,138,0.28); transform: translateY(-3px); box-shadow: 0 6px 24px rgba(90,62,138,0.09); }
+.service-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
 .service-name {
-  font-family:'Cinzel',serif;font-size:1.05rem;font-weight:600;
-  letter-spacing:0.05em;color:var(--ink);margin-bottom:0.8rem;
+  font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600;
+  letter-spacing: 0.05em; color: var(--ink); margin-bottom: 0.8rem;
 }
 .service-desc {
-  font-family:'Cormorant Garamond',serif;font-size:1.05rem;
-  line-height:1.85;color:var(--ink-dim);margin-bottom:1.5rem;
+  font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;
+  line-height: 1.85; color: var(--ink-dim); margin-bottom: 1.2rem; flex: 1;
 }
 .service-includes {
-  list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;
+  list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;
 }
 .service-includes li {
-  font-size:0.8rem;color:var(--ink-dim);padding-left:1.2rem;
-  position:relative;letter-spacing:0.03em;
+  font-size: 0.8rem; color: var(--ink-dim); padding-left: 1.2rem;
+  position: relative; letter-spacing: 0.03em;
 }
-.service-includes li::before { content:'✦';position:absolute;left:0;color:var(--lavender-mid);font-size:0.55rem;top:0.2rem; }
+.service-includes li::before { content: '✦'; position: absolute; left: 0; color: var(--lavender-soft); font-size: 0.55rem; top: 0.2rem; }
 .service-meta {
-  display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center;
-  padding-top:1.2rem;
-  border-top:1px solid rgba(196,176,232,0.12);
+  display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;
+  padding-top: 1.2rem; border-top: 1px solid rgba(90,62,138,0.08); margin-top: auto;
 }
 .service-tag {
-  font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;
-  padding:0.3rem 0.8rem;border:1px solid rgba(196,176,232,0.35);color:var(--lavender-dim);
+  font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 0.3rem 0.8rem; border: 1px solid rgba(90,62,138,0.2); color: var(--lavender-mid);
+  background: rgba(90,62,138,0.04);
 }
-.service-duration {
-  font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-faint);margin-left:auto;
-}
+.service-duration { font-size: 0.72rem; letter-spacing: 0.08em; color: var(--ink-faint); margin-left: auto; }
 
-/* How it works */
-.how-section { background:var(--surface);padding:6rem 2rem;position:relative;z-index:1; }
-.how-steps {
-  max-width:900px;margin:3rem auto 0;
-  display:flex;flex-direction:column;gap:0;
-}
+.how-section { background: var(--surface); padding: 6rem 2rem; position: relative; z-index: 1; }
+.how-steps { max-width: 900px; margin: 3rem auto 0; display: flex; flex-direction: column; }
 .how-step {
-  display:grid;grid-template-columns:80px 1fr;gap:2rem;
-  padding:2.5rem 0;
-  border-bottom:1px solid rgba(196,176,232,0.08);
-  align-items:start;
+  display: grid; grid-template-columns: 80px 1fr; gap: 2rem;
+  padding: 2.5rem 0; border-bottom: 1px solid rgba(90,62,138,0.08); align-items: start;
 }
-.how-step:last-child { border-bottom:none; }
+.how-step:last-child { border-bottom: none; }
 .step-num {
-  font-family:'Cinzel',serif;font-size:2.5rem;font-weight:700;
-  color:rgba(196,176,232,0.2);line-height:1;
+  font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: 700;
+  color: rgba(90,62,138,0.15); line-height: 1;
 }
 .step-content h3 {
-  font-family:'Cinzel',serif;font-size:1rem;font-weight:600;
-  letter-spacing:0.05em;color:var(--ink);margin-bottom:0.6rem;
+  font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600;
+  letter-spacing: 0.05em; color: var(--ink); margin-bottom: 0.6rem;
 }
-.step-content p {
-  font-family:'Cormorant Garamond',serif;font-size:1.05rem;
-  line-height:1.8;color:var(--ink-dim);
-}
+.step-content p { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; line-height: 1.8; color: var(--ink-dim); }
 
-/* Testimonials */
-.testimonials-section { padding:6rem 2rem;position:relative;z-index:1; }
+.testimonials-section { padding: 6rem 2rem; position: relative; z-index: 1; }
 .testimonials-grid {
-  max-width:1100px;margin:3rem auto 0;
-  display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;
+  max-width: 1100px; margin: 3rem auto 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
 }
 .testimonial-card {
-  background:var(--surface);border:1px solid rgba(196,176,232,0.12);
-  padding:2rem 1.5rem;position:relative;
+  background: var(--white); border: 1px solid rgba(90,62,138,0.1);
+  padding: 2rem 1.5rem; position: relative;
+  box-shadow: 0 2px 12px rgba(90,62,138,0.04);
 }
 .testimonial-card::before {
-  content:'"';font-family:'Cinzel',serif;font-size:4rem;
-  color:var(--lavender-mid);opacity:0.12;
-  position:absolute;top:-0.5rem;left:1rem;line-height:1;
+  content: '"'; font-family: 'Cinzel', serif; font-size: 4rem;
+  color: var(--lavender-faint); opacity: 0.5;
+  position: absolute; top: -0.5rem; left: 1rem; line-height: 1;
 }
-.stars { color:var(--lavender-mid);font-size:0.8rem;letter-spacing:0.2rem;margin-bottom:1rem;display:block; }
+.stars { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.2rem; margin-bottom: 1rem; display: block; }
 .testimonial-text {
-  font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;
-  line-height:1.8;color:var(--ink-dim);margin-bottom:1.2rem;
+  font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-style: italic;
+  line-height: 1.8; color: var(--ink-dim); margin-bottom: 1.2rem;
 }
-.testimonial-author { font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--lavender-mid); }
+.testimonial-author { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lavender-mid); }
 
 @media(max-width:900px){
-  .services-grid{grid-template-columns:1fr;}
-  .testimonials-grid{grid-template-columns:1fr;}
-  .how-step{grid-template-columns:60px 1fr;gap:1.2rem;}
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .how-step { grid-template-columns: 60px 1fr; gap: 1.2rem; }
 }
 </style>
 </head>
@@ -118,7 +98,7 @@
 
 <div class="page-hero">
   <div class="page-eyebrow">What I Offer</div>
-  <h1 class="page-title">Astro &amp; Tarot Services</h1>
+  <h1 class="page-title">Readings &amp; Sessions</h1>
   <p class="page-subtitle">Each session is a sacred space for clarity, insight, and cosmic alignment.</p>
 </div>
 
@@ -127,10 +107,10 @@
     <div class="service-card fade-in">
       <span class="service-icon">☉</span>
       <div class="service-name">Birth Chart Reading</div>
-      <p class="service-desc">A deep, comprehensive reading of your natal chart — exploring your sun, moon, rising, and the placement of all nine planets to illuminate your soul's blueprint and life themes.</p>
+      <p class="service-desc">A comprehensive reading of your natal chart — exploring your sun, moon, rising, and all nine Navgrahas to illuminate your soul's blueprint and life themes.</p>
       <ul class="service-includes">
         <li>Full planetary placements &amp; house analysis</li>
-        <li>Life themes, strengths &amp; shadow patterns</li>
+        <li>Life themes, strengths &amp; karmic patterns</li>
         <li>Current planetary transits</li>
         <li>Recorded session + written summary</li>
       </ul>
@@ -142,12 +122,12 @@
     <div class="service-card fade-in">
       <span class="service-icon">☽</span>
       <div class="service-name">Tarot Reading</div>
-      <p class="service-desc">Intuitive tarot sessions for clarity on love, career, life transitions, and spiritual growth — drawing from traditional symbolism and Jungian archetypal frameworks.</p>
+      <p class="service-desc">Intuitive tarot sessions for clarity on love, career, life transitions, and spiritual growth — drawing from the rich symbolic language of the cards.</p>
       <ul class="service-includes">
         <li>Single question or open reading</li>
         <li>Love, career, or life path focus</li>
-        <li>Jungian archetypal interpretation</li>
         <li>Photo of the spread included</li>
+        <li>Follow-up Q&amp;A via WhatsApp</li>
       </ul>
       <div class="service-meta">
         <span class="service-tag">Tarot</span>
@@ -155,42 +135,44 @@
       </div>
     </div>
     <div class="service-card fade-in">
-      <span class="service-icon">♄</span>
-      <div class="service-name">Saturn Return Guidance</div>
-      <p class="service-desc">Navigating your Saturn Return (ages 27–30 or 57–60)? This specialised deep reading helps you understand and work consciously with this powerful life threshold.</p>
+      <span class="service-icon">💰</span>
+      <div class="service-name">Financial Reading</div>
+      <p class="service-desc">An astrology reading focused on your relationship with wealth, career, and abundance — exploring the 2nd, 6th, 10th, and 11th houses of your chart.</p>
       <ul class="service-includes">
-        <li>Saturn's natal placement &amp; themes</li>
-        <li>What Saturn is asking you to master</li>
-        <li>Practical integration guidance</li>
-        <li>Full recorded session</li>
+        <li>Wealth &amp; abundance indicators</li>
+        <li>Career path &amp; dharma analysis</li>
+        <li>Timing for financial decisions</li>
+        <li>Planetary periods affecting income</li>
       </ul>
       <div class="service-meta">
-        <span class="service-tag">Astrology</span>
-        <span class="service-duration">90 min deep session</span>
+        <span class="service-tag">Vedic Astrology</span>
+        <span class="service-duration">60 min · Birth details required</span>
       </div>
     </div>
-    
-      <p class="service-desc">An ongoing coaching container integrating Jungian shadow work, archetypal psychology, astrology, and spiritual practice — for those ready to do deep, lasting inner work.</p>
+    <div class="service-card fade-in">
+      <span class="service-icon">🌿</span>
+      <div class="service-name">Soul Path Reading</div>
+      <p class="service-desc">A reading centred on your life's purpose, dharma, and soul evolution — exploring the nodes of the moon and the deeper calling written in your chart.</p>
       <ul class="service-includes">
-        <li>Monthly 1:1 sessions</li>
-        <li>Shadow work &amp; inner child healing</li>
-        <li>Astrology as coaching framework</li>
-        <li>Between-session support</li>
+        <li>Rahu &amp; Ketu — karmic axis analysis</li>
+        <li>Soul's evolutionary direction</li>
+        <li>Gifts brought from past lives</li>
+        <li>Practical guidance for alignment</li>
       </ul>
       <div class="service-meta">
-        <span class="service-tag">Coaching</span>
-        <span class="service-duration">Monthly packages available</span>
+        <span class="service-tag">Vedic Astrology</span>
+        <span class="service-duration">60 min · Birth details required</span>
       </div>
     </div>
     <div class="service-card fade-in">
       <span class="service-icon">✦</span>
-      <div class="service-name">Synastry &amp; Relationship Chart</div>
-      <p class="service-desc">Explore the cosmic dynamics between you and a partner, friend, or family member — understanding the karmic patterns and growth potential written in your planetary interplay.</p>
+      <div class="service-name">Relationship &amp; Synastry Reading</div>
+      <p class="service-desc">Explore the cosmic dynamics between you and a partner, friend, or family member — understanding compatibility, karmic patterns, and soul contracts.</p>
       <ul class="service-includes">
-        <li>Composite &amp; synastry analysis</li>
-        <li>Karmic patterns &amp; soul contracts</li>
-        <li>Compatibility &amp; challenge areas</li>
-        <li>Growth opportunities together</li>
+        <li>Synastry &amp; composite chart analysis</li>
+        <li>Karmic ties &amp; past-life connections</li>
+        <li>Compatibility &amp; growth potential</li>
+        <li>Practical relationship guidance</li>
       </ul>
       <div class="service-meta">
         <span class="service-tag">Relationships</span>
@@ -198,24 +180,33 @@
       </div>
     </div>
     <div class="service-card fade-in">
-      <span class="service-icon">◉</span>
-      <div class="service-name">Annual Solar Return</div>
-      <p class="service-desc">What does your next year hold? A solar return reading maps the major themes, opportunities, challenges, and growth areas that will define your coming solar cycle.</p>
+      <span class="service-icon">💍</span>
+      <div class="service-name">Marriage &amp; Karmic Compatibility</div>
+      <p class="service-desc">A detailed compatibility reading for couples considering marriage — exploring Ashtakoot matching, karmic bonds, and the long-term potential of the union.</p>
       <ul class="service-includes">
-        <li>Year-ahead themes &amp; focus areas</li>
-        <li>Key planetary activations</li>
-        <li>Opportunities to lean into</li>
-        <li>Timing &amp; seasonal guidance</li>
+        <li>Ashtakoot &amp; Guna matching</li>
+        <li>Karmic &amp; dharmic compatibility</li>
+        <li>Timing &amp; auspicious periods</li>
+        <li>Long-term relationship themes</li>
       </ul>
       <div class="service-meta">
-        <span class="service-tag">Forecasting</span>
-        <span class="service-duration">45 min · Annual guidance</span>
+        <span class="service-tag">Marriage · Vedic</span>
+        <span class="service-duration">90 min · Both birth charts required</span>
       </div>
     </div>
   </div>
+
+  <!-- Gift sessions note -->
+  <div style="max-width:1100px;margin:3rem auto 0;padding:2rem;background:var(--surface);border:1px solid rgba(90,62,138,0.12);display:flex;align-items:center;gap:1.5rem;">
+    <span style="font-size:2rem;flex-shrink:0;">🎁</span>
+    <div>
+      <div style="font-family:'Cinzel',serif;font-size:0.95rem;font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:0.4rem;">Gift a Session</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.7;color:var(--ink-dim);">All sessions are available as paid gifts — a truly meaningful present for someone you love. Mention it in your booking message and I'll send a beautiful gift confirmation for you to share.</p>
+    </div>
+    <a href="contact.html" class="btn-secondary" style="flex-shrink:0;">Enquire →</a>
+  </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <div class="how-section">
   <div style="max-width:900px;margin:0 auto;">
     <div class="section-eyebrow">The Process</div>
@@ -225,8 +216,8 @@
     <div class="how-step fade-in">
       <div class="step-num">01</div>
       <div class="step-content">
-        <h3>Book &amp; Share Your Details</h3>
-        <p>Fill out the contact form with your preferred service, date of birth (and time if known), and a little about what you're seeking. Gift sessions are also available — mention it in your message. I'll confirm within 24–48 hours.</p>
+        <h3>Book, Pay &amp; Share Your Details</h3>
+        <p>Fill out the contact form with your preferred service and birth details. Once I confirm availability, you'll receive payment details. Sessions are confirmed upon receipt of payment.</p>
       </div>
     </div>
     <div class="how-step fade-in">
@@ -239,21 +230,20 @@
     <div class="how-step fade-in">
       <div class="step-num">03</div>
       <div class="step-content">
-        <h3>We Meet (Online or in Person)</h3>
-        <p>Sessions are held online via Zoom or Google Meet, or in person in Goa. I hold the space with warmth and depth — this is a conversation, not a performance.</p>
+        <h3>We Meet Online</h3>
+        <p>Sessions are held via Zoom or Google Meet. I hold the space with warmth and depth — this is a conversation, not a performance.</p>
       </div>
     </div>
     <div class="how-step fade-in">
       <div class="step-num">04</div>
       <div class="step-content">
         <h3>You Receive a Recording &amp; Notes</h3>
-        <p>Most sessions are recorded so you can return to them. You'll also receive any relevant charts or written notes to support your integration.</p>
+        <p>Sessions are recorded so you can return to them. You'll also receive any relevant charts or written notes to support your integration.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- TESTIMONIALS -->
 <div class="testimonials-section">
   <div style="max-width:1100px;margin:0 auto;text-align:center;">
     <div class="section-eyebrow" style="justify-content:center;">Kind Words</div>
@@ -262,7 +252,7 @@
   <div class="testimonials-grid">
     <div class="testimonial-card fade-in">
       <span class="stars">★★★★★</span>
-      <p class="testimonial-text">Rushali's birth chart reading cracked me open in the best way. She combined astrological depth with such psychological insight. I felt truly seen.</p>
+      <p class="testimonial-text">Rushali's birth chart reading was so deeply accurate. She combined astrological depth with such clarity and warmth. I felt truly seen.</p>
       <span class="testimonial-author">— Priya M., Mumbai</span>
     </div>
     <div class="testimonial-card fade-in">
@@ -272,7 +262,7 @@
     </div>
     <div class="testimonial-card fade-in">
       <span class="stars">★★★★★</span>
-      <p class="testimonial-text">I came for astrology and left with a whole new understanding of my shadow patterns. The integration of psychology with the planets is unique and profound.</p>
+      <p class="testimonial-text">The relationship reading gave me so much clarity on patterns I had been repeating. Honest, compassionate, and genuinely helpful.</p>
       <span class="testimonial-author">— Siddharth K., Delhi</span>
     </div>
   </div>

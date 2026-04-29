@@ -4,93 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book a Session — Navgraha Shakha</title>
-<meta name="description" content="Book an astrology reading, tarot session, or coaching consultation with Rushali of Navgraha Shakha.">
 <link rel="stylesheet" href="style.css">
 <style>
-.contact-layout {
-  max-width:1100px;margin:0 auto;
-  display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start;
-}
-.contact-info {}
-.contact-intro {
-  font-family:'Cormorant Garamond',serif;font-size:1.15rem;
-  line-height:1.9;color:var(--ink-dim);margin-bottom:2.5rem;
-}
-.contact-details {
-  list-style:none;display:flex;flex-direction:column;gap:1.3rem;margin-bottom:3rem;
-}
-.contact-details li {
-  display:flex;align-items:center;gap:1.2rem;
-  font-size:0.9rem;color:var(--ink-dim);
-}
-.contact-icon {
-  width:40px;height:40px;flex-shrink:0;
-  border:1px solid rgba(196,176,232,0.2);
-  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
-}
-.availability {
-  background:var(--surface);border:1px solid rgba(196,176,232,0.15);
-  padding:1.8rem;margin-top:2rem;
-}
-.availability h3 {
-  font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;
-  letter-spacing:0.08em;color:var(--lavender-mid);margin-bottom:1.2rem;
-}
-.availability-row {
-  display:flex;justify-content:space-between;align-items:center;
-  padding:0.6rem 0;border-bottom:1px solid rgba(196,176,232,0.06);
-  font-size:0.82rem;
-}
+.contact-layout { max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start; }
+.contact-intro { font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.9;color:var(--ink-dim);margin-bottom:2.5rem; }
+.contact-details { list-style:none;display:flex;flex-direction:column;gap:1.3rem;margin-bottom:2.5rem; }
+.contact-details li { display:flex;align-items:flex-start;gap:1.2rem;font-size:0.9rem;color:var(--ink-dim); }
+.contact-icon { width:40px;height:40px;flex-shrink:0;border:1px solid rgba(90,62,138,0.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;background:var(--white); }
+.contact-details a { color:var(--ink-dim);text-decoration:none;transition:color 0.3s; }
+.contact-details a:hover { color:var(--lavender); }
+.availability { background:var(--surface);border:1px solid rgba(90,62,138,0.1);padding:1.8rem;margin-top:0.5rem; }
+.availability h3 { font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;letter-spacing:0.08em;color:var(--lavender-mid);margin-bottom:1.2rem; }
+.availability-row { display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid rgba(90,62,138,0.07);font-size:0.82rem; }
 .availability-row:last-child { border-bottom:none;padding-bottom:0; }
 .availability-row span:first-child { color:var(--ink-dim); }
-.availability-row span:last-child { color:var(--lavender-mid);font-size:0.75rem;letter-spacing:0.1em; }
+.availability-row span:last-child { color:var(--lavender-mid);font-size:0.72rem;letter-spacing:0.1em; }
 
-/* Form */
 .contact-form { display:flex;flex-direction:column;gap:1.2rem; }
 .form-row { display:grid;grid-template-columns:1fr 1fr;gap:1rem; }
-.form-success {
-  display:none;
-  background:rgba(196,176,232,0.06);
-  border:1px solid rgba(196,176,232,0.2);
-  padding:1.5rem;
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.05rem;font-style:italic;
-  color:var(--lavender-mid);text-align:center;line-height:1.7;
-}
+.form-success { display:none;background:rgba(90,62,138,0.06);border:1px solid rgba(90,62,138,0.2);padding:2rem;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--lavender-dim);text-align:center;line-height:1.7; }
 
-/* FAQ */
 .faq-section { background:var(--surface);padding:6rem 2rem;position:relative;z-index:1; }
 .faq-inner { max-width:800px;margin:0 auto; }
-.faq-list { margin-top:3rem;display:flex;flex-direction:column;gap:0; }
-.faq-item {
-  border-bottom:1px solid rgba(196,176,232,0.12);
-  overflow:hidden;
-}
-.faq-question {
-  width:100%;background:none;border:none;text-align:left;
-  padding:1.5rem 0;cursor:pointer;
-  display:flex;justify-content:space-between;align-items:center;gap:1rem;
-  font-family:'Cinzel',serif;font-size:0.95rem;font-weight:600;
-  letter-spacing:0.04em;color:var(--ink);transition:color 0.3s;
-}
-.faq-question:hover { color:var(--lavender-mid); }
-.faq-arrow {
-  font-size:1rem;color:var(--lavender-mid);flex-shrink:0;
-  transition:transform 0.3s;
-}
+.faq-list { margin-top:3rem;display:flex;flex-direction:column; }
+.faq-item { border-bottom:1px solid rgba(90,62,138,0.1);overflow:hidden; }
+.faq-question { width:100%;background:none;border:none;text-align:left;padding:1.5rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Cinzel',serif;font-size:0.95rem;font-weight:600;letter-spacing:0.04em;color:var(--ink);transition:color 0.3s; }
+.faq-question:hover { color:var(--lavender); }
+.faq-arrow { font-size:1rem;color:var(--lavender-soft);flex-shrink:0;transition:transform 0.3s; }
 .faq-item.open .faq-arrow { transform:rotate(45deg); }
-.faq-answer {
-  max-height:0;overflow:hidden;transition:max-height 0.4s ease;
-}
-.faq-answer-inner {
-  font-family:'Cormorant Garamond',serif;font-size:1.05rem;
-  line-height:1.85;color:var(--ink-dim);padding-bottom:1.5rem;
-}
+.faq-answer { max-height:0;overflow:hidden;transition:max-height 0.4s ease; }
+.faq-answer-inner { font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.85;color:var(--ink-dim);padding-bottom:1.5rem; }
 
-@media(max-width:900px){
-  .contact-layout{grid-template-columns:1fr;gap:3.5rem;}
-  .form-row{grid-template-columns:1fr;}
-}
+@media(max-width:900px){ .contact-layout{grid-template-columns:1fr;gap:3.5rem;} .form-row{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
@@ -100,60 +45,49 @@
 <div class="page-hero">
   <div class="page-eyebrow">Get in Touch</div>
   <h1 class="page-title">Book a Session</h1>
-  <p class="page-subtitle">Ready to read your stars, receive a reading, or explore working together? I'd love to hear from you.</p>
+  <p class="page-subtitle">Ready to explore your chart or receive a reading? I'd love to hear from you.</p>
 </div>
 
 <section style="background:var(--deep);padding:6rem 2rem;position:relative;z-index:1;">
   <div class="contact-layout">
-
-    <!-- INFO -->
     <div class="contact-info fade-in">
-      <p class="contact-intro">
-        Each session is a sacred and confidential space. I respond to all enquiries within 24–48 hours and will confirm your booking with session details and preparation notes.
-      </p>
-
+      <p class="contact-intro">Each session is a sacred and confidential space. I respond to all enquiries within 24–48 hours and will confirm your booking with session details and payment information.</p>
       <ul class="contact-details">
         <li>
           <span class="contact-icon">📍</span>
-          <span>Goa, India · Online via Zoom &amp; Google Meet · Worldwide</span>
+          <span>Goa, India · Online sessions worldwide via Zoom &amp; Google Meet</span>
         </li>
         <li>
           <span class="contact-icon">📧</span>
-          <div><div>navgrahashakha@gmail.com</div><div style="font-size:0.82rem;color:var(--ink-faint);margin-top:0.2rem">info@navgrahashakha.com</div></div>
+          <div>
+            <a href="mailto:navgrahashakha@gmail.com">navgrahashakha@gmail.com</a><br>
+            <a href="mailto:info@navgrahashakha.com">info@navgrahashakha.com</a>
+          </div>
         </li>
         <li>
           <span class="contact-icon">📱</span>
           <span>WhatsApp: +91 XXXXX XXXXX</span>
         </li>
         <li>
-          <span class="contact-icon">🕐</span>
-          <span>Response within 24–48 hours</span>
+          <span class="contact-icon">▶</span>
+          <a href="https://youtube.com/@navgrahashakha" target="_blank">YouTube: Navgraha Shakha</a>
         </li>
         <li>
           <span class="contact-icon">📸</span>
-          <span>Instagram: @navgrahashakha</span>
+          <a href="https://instagram.com/navgrahashakha" target="_blank">Instagram: @navgrahashakha</a>
         </li>
       </ul>
-
       <div class="availability">
         <h3>✦ Current Availability</h3>
-        <div class="availability-row">
-          <span>Birth Chart Readings</span>
-          <span>Open</span>
-        </div>
-        <div class="availability-row">
-          <span>Tarot Sessions</span>
-          <span>Open</span>
-        </div>
-        
-        <div class="availability-row">
-          <span>In-person (Goa)</span>
-          <span>By Request</span>
-        </div>
+        <div class="availability-row"><span>Birth Chart Readings</span><span>Open</span></div>
+        <div class="availability-row"><span>Tarot Sessions</span><span>Open</span></div>
+        <div class="availability-row"><span>Financial Readings</span><span>Open</span></div>
+        <div class="availability-row"><span>Soul Path Readings</span><span>Open</span></div>
+        <div class="availability-row"><span>Relationship &amp; Synastry</span><span>Open</span></div>
+        <div class="availability-row"><span>Gift Sessions</span><span>Available</span></div>
       </div>
     </div>
 
-    <!-- FORM -->
     <div class="fade-in">
       <form class="contact-form" onsubmit="handleSubmit(event)" id="contactForm">
         <div class="form-row">
@@ -168,7 +102,7 @@
         </div>
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="navgrahashakha@gmail.com" required>
+          <input type="email" class="form-input" placeholder="your@email.com" required>
         </div>
         <div class="form-group">
           <label class="form-label">WhatsApp / Phone (optional)</label>
@@ -178,33 +112,30 @@
           <label class="form-label">Service</label>
           <select class="form-select">
             <option value="">Select a service...</option>
-            <optgroup label="Astro & Tarot">
-              <option>Birth Chart Reading (60 min)</option>
-              <option>Tarot Reading (30 min)</option>
-              <option>Tarot Reading (60 min)</option>
-              <option>Saturn Return Guidance (90 min)</option>
-              <option>Synastry / Relationship Chart (75 min)</option>
-              <option>Annual Solar Return (45 min)</option>
-            </optgroup>
-            
+            <option>Birth Chart Reading (60 min)</option>
+            <option>Tarot Reading (30 min)</option>
+            <option>Tarot Reading (60 min)</option>
+            <option>Financial Reading (60 min)</option>
+            <option>Soul Path Reading (60 min)</option>
+            <option>Relationship &amp; Synastry Reading (75 min)</option>
+            <option>Marriage &amp; Karmic Compatibility (90 min)</option>
             <option>Gift Session for Someone</option>
             <option>General Enquiry / Not Sure Yet</option>
           </select>
         </div>
         <div class="form-group">
           <label class="form-label">Date of Birth (for chart readings)</label>
-          <input type="text" class="form-input" placeholder="DD/MM/YYYY — include time if known">
+          <input type="text" class="form-input" placeholder="DD/MM/YYYY — include birth time if known">
         </div>
         <div class="form-group">
           <label class="form-label">Your Message</label>
-          <textarea class="form-textarea" placeholder="Tell me a little about what you're seeking, what's on your mind, or any questions you have..."></textarea>
+          <textarea class="form-textarea" placeholder="Tell me a little about what you're seeking, or any questions you have..."></textarea>
         </div>
         <div class="form-group">
           <label class="form-label">Preferred Session Format</label>
           <select class="form-select">
             <option>Online via Zoom</option>
             <option>Online via Google Meet</option>
-            <option>In Person (Goa only)</option>
             <option>No preference</option>
           </select>
         </div>
@@ -215,53 +146,34 @@
         I'll be in touch within 24–48 hours to confirm your session.
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- FAQ -->
 <div class="faq-section">
   <div class="faq-inner">
     <div class="section-eyebrow">Common Questions</div>
     <h2 class="section-title">Frequently Asked Questions</h2>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          Do I need to know my exact birth time for a chart reading?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Birth time is ideal — especially for determining your rising sign and house placements. However, a reading is still rich and valuable without it. Just share what you know and I'll work with it.</div>
-        </div>
+        <button class="faq-question" onclick="toggleFaq(this)">Do I need my exact birth time for a chart reading?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Birth time is ideal — especially for determining your rising sign and house placements. However, a reading is still valuable without it. Just share what you know and I'll work with it.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          Are sessions recorded?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Yes — most sessions are recorded via Zoom so you can return to the material. You'll receive the recording link after our session, along with any relevant notes or charts.</div>
-        </div>
+        <button class="faq-question" onclick="toggleFaq(this)">Are sessions recorded?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes — sessions are recorded via Zoom or Google Meet so you can return to the material. You'll receive the recording link after our session, along with any notes or charts.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          How do I pay?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Payment details will be shared upon booking confirmation. I accept UPI, bank transfer (India), and PayPal or Wise for international clients.</div>
-        </div>
+        <button class="faq-question" onclick="toggleFaq(this)">How do I pay?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Payment details are shared upon booking confirmation. I accept UPI and bank transfer for India-based clients, and PayPal or Wise for international clients. Sessions are confirmed upon receipt of payment.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          Can I book a session as a gift?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Yes! Gift sessions are available and make a truly meaningful present. Once payment is received, I'll send you a gift confirmation note to share with your loved one. They can then schedule their session at a time that suits them.</div>
-        </div>
+        <button class="faq-question" onclick="toggleFaq(this)">Can I book a session as a gift?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes! Gift sessions are available and make a truly meaningful present. Once payment is received, I'll send you a gift confirmation note to share with your loved one. They can then schedule their session at a time that suits them.</div></div>
       </div>
-      
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What is the difference between a birth chart reading and a soul path reading?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">A birth chart reading covers the full picture of your natal chart — all planets, houses, and themes. A soul path reading is more focused specifically on your life's purpose, dharma, and karmic direction using the lunar nodes (Rahu and Ketu).</div></div>
+      </div>
     </div>
   </div>
 </div>
