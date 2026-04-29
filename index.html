@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navgraha Shakha — Astrology · Tarot · Psycho-Spiritual Coaching</title>
+<title>Navgraha Shakha — Astrology · Tarot · Cosmic Guidance</title>
 <meta name="description" content="Navgraha Shakha — Vedic astrology, tarot readings, and psycho-spiritual coaching with Rushali, based in Goa, India.">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -22,15 +22,15 @@
 .mandala-ring {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(201,168,76,0.08);
+  border: 1px solid rgba(196,176,232,0.08);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   animation: spin 80s linear infinite;
   pointer-events: none;
 }
 .mandala-ring:nth-child(1) { width: 620px; height: 620px; }
-.mandala-ring:nth-child(2) { width: 460px; height: 460px; border-color: rgba(201,168,76,0.12); animation-duration: 55s; animation-direction: reverse; }
-.mandala-ring:nth-child(3) { width: 300px; height: 300px; border-color: rgba(201,168,76,0.2); animation-duration: 40s; }
+.mandala-ring:nth-child(2) { width: 460px; height: 460px; border-color: rgba(196,176,232,0.15); animation-duration: 55s; animation-direction: reverse; }
+.mandala-ring:nth-child(3) { width: 300px; height: 300px; border-color: rgba(196,176,232,0.2); animation-duration: 40s; }
 @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
 
 .hero-symbol { font-size: 2.8rem; margin-bottom: 2rem; animation: float 6s ease-in-out infinite; position: relative; z-index: 2; }
@@ -48,7 +48,7 @@
 }
 .hero-title span {
   display: block;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dim));
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--lavender-dim));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -82,8 +82,8 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 0.45rem 1.1rem;
-  border: 1px solid rgba(201,168,76,0.3);
-  color: var(--gold-light);
+  border: 1px solid rgba(196,176,232,0.35);
+  color: var(--lavender-soft);
   border-radius: 999px;
 }
 .hero-buttons {
@@ -102,7 +102,7 @@
   align-items: center; gap: 0.5rem;
   z-index: 2; opacity: 0.45;
 }
-.scroll-hint span { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); }
+.scroll-hint span { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--lavender-mid); }
 .scroll-line {
   width: 1px; height: 40px;
   background: linear-gradient(to bottom, var(--gold), transparent);
@@ -117,8 +117,8 @@
 /* Intro strip */
 .intro-strip {
   background: var(--surface);
-  border-top: 1px solid rgba(201,168,76,0.1);
-  border-bottom: 1px solid rgba(201,168,76,0.1);
+  border-top: 1px solid rgba(196,176,232,0.12);
+  border-bottom: 1px solid rgba(196,176,232,0.12);
   padding: 4rem 2rem;
   z-index: 1;
   position: relative;
@@ -162,7 +162,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5px;
-  background: rgba(201,168,76,0.08);
+  background: rgba(196,176,232,0.08);
 }
 .svc-card {
   background: var(--deep);
@@ -203,12 +203,12 @@
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--lavender-mid);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
 }
-.svc-link:hover { border-color: var(--gold); }
+.svc-link:hover { border-color: var(--lavender-mid); }
 
 /* Blog preview */
 .blog-preview {
@@ -227,24 +227,24 @@
 .blog-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .blog-card {
   background: var(--surface2);
-  border: 1px solid rgba(201,168,76,0.1);
+  border: 1px solid rgba(196,176,232,0.12);
   overflow: hidden;
   transition: border-color 0.3s;
 }
-.blog-card:hover { border-color: rgba(201,168,76,0.3); }
+.blog-card:hover { border-color: rgba(196,176,232,0.35); }
 .blog-card-img {
   width: 100%; aspect-ratio: 16/9;
   background: var(--surface3);
   display: flex; align-items: center; justify-content: center;
   font-size: 2.5rem;
-  border-bottom: 1px solid rgba(201,168,76,0.08);
+  border-bottom: 1px solid rgba(196,176,232,0.08);
 }
 .blog-card-body { padding: 1.8rem; }
 .blog-tag {
   font-size: 0.62rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--lavender-mid);
   margin-bottom: 0.7rem;
   display: block;
 }
@@ -268,18 +268,18 @@
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--lavender-mid);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
 }
-.blog-read-more:hover { border-color: var(--gold); }
+.blog-read-more:hover { border-color: var(--lavender-mid); }
 
 /* CTA band */
 .cta-band {
   background: var(--surface2);
-  border-top: 1px solid rgba(201,168,76,0.12);
-  border-bottom: 1px solid rgba(201,168,76,0.12);
+  border-top: 1px solid rgba(196,176,232,0.15);
+  border-bottom: 1px solid rgba(196,176,232,0.15);
   padding: 5rem 2rem;
   text-align: center;
   z-index: 1;
@@ -327,7 +327,7 @@
   <div class="hero-pills">
     <span class="pill">Vedic Astrology</span>
     <span class="pill">Tarot Readings</span>
-    <span class="pill">Jungian Coaching</span>
+    
   </div>
   <div class="hero-buttons">
     <a href="services.html" class="btn-primary">Explore Services</a>
@@ -350,9 +350,9 @@
       <p>Intuitive readings rooted in Jungian archetypes and the symbolic language of the cards.</p>
     </div>
     <div class="intro-item fade-in">
-      <span class="icon">🜎</span>
-      <h3>Psycho-Spiritual Coaching</h3>
-      <p>Shadow work, inner child healing, and soul-aligned coaching for lasting transformation.</p>
+      <span class="icon">🌙</span>
+      <h3>Astro Coaching</h3>
+      <p>Using your birth chart as a tool for self-understanding, growth, and life navigation.</p>
     </div>
     
   </div>
@@ -397,7 +397,7 @@
         <div class="section-eyebrow">From the Cosmic Journal</div>
         <h2 class="section-title" style="margin-bottom:0">Latest Writings</h2>
       </div>
-      <a href="blog.html" style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.3s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='transparent'">View All Posts →</a>
+      <a href="blog.html" style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--lavender-mid);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.3s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='transparent'">View All Posts →</a>
     </div>
     <div class="blog-row">
       <div class="blog-card fade-in">

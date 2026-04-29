@@ -15,7 +15,7 @@
 .post-header { margin-bottom:3rem; }
 .post-tag {
   font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:1rem;display:block;
+  color:var(--lavender-mid);margin-bottom:1rem;display:block;
 }
 .post-title {
   font-family:'Cinzel',serif;font-size:clamp(1.6rem,4vw,2.8rem);
@@ -27,14 +27,14 @@
   color:var(--ink-faint);
   display:flex;gap:1.5rem;flex-wrap:wrap;
   padding-bottom:2rem;
-  border-bottom:1px solid rgba(201,168,76,0.12);
+  border-bottom:1px solid rgba(196,176,232,0.15);
 }
 .post-hero-img {
   width:100%;aspect-ratio:16/7;
   background:var(--surface2);
   display:flex;align-items:center;justify-content:center;
   font-size:5rem;margin-bottom:3rem;
-  border:1px solid rgba(201,168,76,0.1);
+  border:1px solid rgba(196,176,232,0.12);
 }
 .post-body p {
   font-family:'Cormorant Garamond',serif;font-size:1.2rem;
@@ -46,11 +46,11 @@
   letter-spacing:0.04em;color:var(--ink);
   margin:3rem 0 1.2rem;
   padding-bottom:0.8rem;
-  border-bottom:1px solid rgba(201,168,76,0.12);
+  border-bottom:1px solid rgba(196,176,232,0.15);
 }
 .post-body h3 {
   font-family:'Cinzel',serif;font-size:1.05rem;font-weight:600;
-  letter-spacing:0.04em;color:var(--gold);margin:2rem 0 0.8rem;
+  letter-spacing:0.04em;color:var(--lavender-mid);margin:2rem 0 0.8rem;
 }
 .post-body blockquote {
   border-left:2px solid var(--gold);
@@ -64,22 +64,22 @@
 /* Post tags */
 .post-tags {
   display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:3rem;
-  padding-top:2rem;border-top:1px solid rgba(201,168,76,0.12);
+  padding-top:2rem;border-top:1px solid rgba(196,176,232,0.15);
 }
 .post-tag-pill {
   font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;
-  padding:0.35rem 0.9rem;border:1px solid rgba(201,168,76,0.25);color:var(--gold-dim);
+  padding:0.35rem 0.9rem;border:1px solid rgba(196,176,232,0.3);color:var(--lavender-dim);
 }
 
 /* Author card */
 .author-card {
   margin-top:3rem;padding:2rem;
-  background:var(--surface);border:1px solid rgba(201,168,76,0.12);
+  background:var(--surface);border:1px solid rgba(196,176,232,0.15);
   display:flex;gap:1.5rem;align-items:start;
 }
 .author-avatar {
   width:56px;height:56px;flex-shrink:0;
-  border:1px solid rgba(201,168,76,0.2);
+  border:1px solid rgba(196,176,232,0.2);
   display:flex;align-items:center;justify-content:center;font-size:1.8rem;
 }
 .author-card h4 {
@@ -94,18 +94,18 @@
 /* Sidebar */
 .post-sidebar {}
 .sidebar-widget {
-  background:var(--surface);border:1px solid rgba(201,168,76,0.1);
+  background:var(--surface);border:1px solid rgba(196,176,232,0.12);
   padding:1.8rem;margin-bottom:2rem;
 }
 .sidebar-widget h3 {
   font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;
-  letter-spacing:0.08em;color:var(--gold);
+  letter-spacing:0.08em;color:var(--lavender-mid);
   margin-bottom:1.2rem;padding-bottom:0.8rem;
-  border-bottom:1px solid rgba(201,168,76,0.1);
+  border-bottom:1px solid rgba(196,176,232,0.12);
 }
 .sidebar-post {
   display:flex;gap:1rem;align-items:start;
-  padding:0.8rem 0;border-bottom:1px solid rgba(201,168,76,0.06);
+  padding:0.8rem 0;border-bottom:1px solid rgba(196,176,232,0.06);
 }
 .sidebar-post:last-child { border-bottom:none;padding-bottom:0; }
 .sidebar-post-icon { font-size:1.3rem;flex-shrink:0; }
@@ -113,15 +113,15 @@
   font-family:'Cinzel',serif;font-size:0.8rem;font-weight:600;
   letter-spacing:0.02em;color:var(--ink);line-height:1.4;margin-bottom:0.3rem;
 }
-.sidebar-post-tag { font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold); }
+.sidebar-post-tag { font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--lavender-mid); }
 
 .sidebar-newsletter input {
-  width:100%;background:var(--surface2);border:1px solid rgba(201,168,76,0.15);
+  width:100%;background:var(--surface2);border:1px solid rgba(196,176,232,0.2);
   color:var(--ink);padding:0.7rem 1rem;font-family:'Jost',sans-serif;
   font-size:0.85rem;font-weight:300;outline:none;margin-bottom:0.8rem;
   transition:border-color 0.3s;
 }
-.sidebar-newsletter input:focus { border-color:rgba(201,168,76,0.4); }
+.sidebar-newsletter input:focus { border-color:rgba(196,176,232,0.45); }
 .sidebar-newsletter input::placeholder { color:var(--ink-faint); }
 .sidebar-newsletter button {
   width:100%;background:var(--gold);color:var(--deep);border:none;
@@ -133,24 +133,24 @@
 /* Related posts */
 .related-section {
   background:var(--surface);padding:5rem 2rem;position:relative;z-index:1;
-  border-top:1px solid rgba(201,168,76,0.1);
+  border-top:1px solid rgba(196,176,232,0.12);
 }
 .related-grid {
   max-width:1100px;margin:2.5rem auto 0;
   display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;
 }
 .related-card {
-  background:var(--surface2);border:1px solid rgba(201,168,76,0.1);
+  background:var(--surface2);border:1px solid rgba(196,176,232,0.12);
   overflow:hidden;transition:border-color 0.3s;
 }
-.related-card:hover { border-color:rgba(201,168,76,0.3); }
+.related-card:hover { border-color:rgba(196,176,232,0.35); }
 .related-card-img {
   width:100%;aspect-ratio:16/9;background:var(--surface3);
   display:flex;align-items:center;justify-content:center;font-size:2rem;
-  border-bottom:1px solid rgba(201,168,76,0.06);
+  border-bottom:1px solid rgba(196,176,232,0.06);
 }
 .related-card-body { padding:1.4rem; }
-.related-tag { font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block; }
+.related-tag { font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--lavender-mid);margin-bottom:0.5rem;display:block; }
 .related-title { font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;letter-spacing:0.03em;color:var(--ink);line-height:1.45; }
 
 @media(max-width:900px){
@@ -311,7 +311,7 @@
 
       <div class="sidebar-widget">
         <h3>Book a Session</h3>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;line-height:1.7;color:var(--ink-dim);margin-bottom:1.2rem;">Want to explore your Moon sign — and the full portrait of your chart? Book a birth chart reading.</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;line-height:1.7;color:var(--ink-dim);margin-bottom:1.2rem;">Want to explore your Moon sign — and the full portrait of your chart? Book a birth chart or tarot reading.</p>
         <a href="contact.html" class="btn-primary" style="display:block;text-align:center;">Book Now</a>
       </div>
 
@@ -322,7 +322,7 @@
           <input type="email" placeholder="your@email.com" required>
           <button type="submit">Subscribe</button>
         </form>
-        <p id="nl-ok" style="display:none;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:0.9rem;margin-top:0.5rem;">You're in ✦</p>
+        <p id="nl-ok" style="display:none;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--lavender-mid);font-size:0.9rem;margin-top:0.5rem;">You're in ✦</p>
       </div>
     </div>
 

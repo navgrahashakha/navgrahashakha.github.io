@@ -25,37 +25,37 @@
 }
 .contact-icon {
   width:40px;height:40px;flex-shrink:0;
-  border:1px solid rgba(201,168,76,0.2);
+  border:1px solid rgba(196,176,232,0.2);
   display:flex;align-items:center;justify-content:center;font-size:1.1rem;
 }
 .availability {
-  background:var(--surface);border:1px solid rgba(201,168,76,0.12);
+  background:var(--surface);border:1px solid rgba(196,176,232,0.15);
   padding:1.8rem;margin-top:2rem;
 }
 .availability h3 {
   font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;
-  letter-spacing:0.08em;color:var(--gold);margin-bottom:1.2rem;
+  letter-spacing:0.08em;color:var(--lavender-mid);margin-bottom:1.2rem;
 }
 .availability-row {
   display:flex;justify-content:space-between;align-items:center;
-  padding:0.6rem 0;border-bottom:1px solid rgba(201,168,76,0.06);
+  padding:0.6rem 0;border-bottom:1px solid rgba(196,176,232,0.06);
   font-size:0.82rem;
 }
 .availability-row:last-child { border-bottom:none;padding-bottom:0; }
 .availability-row span:first-child { color:var(--ink-dim); }
-.availability-row span:last-child { color:var(--gold);font-size:0.75rem;letter-spacing:0.1em; }
+.availability-row span:last-child { color:var(--lavender-mid);font-size:0.75rem;letter-spacing:0.1em; }
 
 /* Form */
 .contact-form { display:flex;flex-direction:column;gap:1.2rem; }
 .form-row { display:grid;grid-template-columns:1fr 1fr;gap:1rem; }
 .form-success {
   display:none;
-  background:rgba(201,168,76,0.06);
-  border:1px solid rgba(201,168,76,0.2);
+  background:rgba(196,176,232,0.06);
+  border:1px solid rgba(196,176,232,0.2);
   padding:1.5rem;
   font-family:'Cormorant Garamond',serif;
   font-size:1.05rem;font-style:italic;
-  color:var(--gold);text-align:center;line-height:1.7;
+  color:var(--lavender-mid);text-align:center;line-height:1.7;
 }
 
 /* FAQ */
@@ -63,7 +63,7 @@
 .faq-inner { max-width:800px;margin:0 auto; }
 .faq-list { margin-top:3rem;display:flex;flex-direction:column;gap:0; }
 .faq-item {
-  border-bottom:1px solid rgba(201,168,76,0.1);
+  border-bottom:1px solid rgba(196,176,232,0.12);
   overflow:hidden;
 }
 .faq-question {
@@ -73,9 +73,9 @@
   font-family:'Cinzel',serif;font-size:0.95rem;font-weight:600;
   letter-spacing:0.04em;color:var(--ink);transition:color 0.3s;
 }
-.faq-question:hover { color:var(--gold); }
+.faq-question:hover { color:var(--lavender-mid); }
 .faq-arrow {
-  font-size:1rem;color:var(--gold);flex-shrink:0;
+  font-size:1rem;color:var(--lavender-mid);flex-shrink:0;
   transition:transform 0.3s;
 }
 .faq-item.open .faq-arrow { transform:rotate(45deg); }
@@ -115,11 +115,11 @@
       <ul class="contact-details">
         <li>
           <span class="contact-icon">📍</span>
-          <span>Goa, India · Online sessions available worldwide via Zoom</span>
+          <span>Goa, India · Online via Zoom &amp; Google Meet · Worldwide</span>
         </li>
         <li>
           <span class="contact-icon">📧</span>
-          <span>your@email.com</span>
+          <div><div>navgrahashakha@gmail.com</div><div style="font-size:0.82rem;color:var(--ink-faint);margin-top:0.2rem">info@navgrahashakha.com</div></div>
         </li>
         <li>
           <span class="contact-icon">📱</span>
@@ -145,10 +145,6 @@
           <span>Tarot Sessions</span>
           <span>Open</span>
         </div>
-        <div class="availability-row">
-          <span>Coaching (Monthly)</span>
-          <span>2 Spots Open</span>
-        </div>
         
         <div class="availability-row">
           <span>In-person (Goa)</span>
@@ -172,7 +168,7 @@
         </div>
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="your@email.com" required>
+          <input type="email" class="form-input" placeholder="navgrahashakha@gmail.com" required>
         </div>
         <div class="form-group">
           <label class="form-label">WhatsApp / Phone (optional)</label>
@@ -187,11 +183,11 @@
               <option>Tarot Reading (30 min)</option>
               <option>Tarot Reading (60 min)</option>
               <option>Saturn Return Guidance (90 min)</option>
-              <option>Psycho-Spiritual Coaching (Monthly)</option>
               <option>Synastry / Relationship Chart (75 min)</option>
               <option>Annual Solar Return (45 min)</option>
             </optgroup>
             
+            <option>Gift Session for Someone</option>
             <option>General Enquiry / Not Sure Yet</option>
           </select>
         </div>
@@ -207,6 +203,7 @@
           <label class="form-label">Preferred Session Format</label>
           <select class="form-select">
             <option>Online via Zoom</option>
+            <option>Online via Google Meet</option>
             <option>In Person (Goa only)</option>
             <option>No preference</option>
           </select>
@@ -261,18 +258,10 @@
           <span class="faq-arrow">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Absolutely. Just mention it in your message and I'll prepare a gift confirmation for you to share. The recipient can then schedule their session at their convenience.</div>
+          <div class="faq-answer-inner">Yes! Gift sessions are available and make a truly meaningful present. Once payment is received, I'll send you a gift confirmation note to share with your loved one. They can then schedule their session at a time that suits them.</div>
         </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          What is psycho-spiritual coaching and how is it different from a reading?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">A reading is a one-time session focused on insight and reflection. Coaching is an ongoing relationship — typically monthly sessions over 3–6 months — where we work together on specific inner patterns, shadow material, and soul-aligned goals using astrology, Jungian frameworks, and other tools.</div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>

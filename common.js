@@ -12,7 +12,7 @@ function getNav(activePage) {
   ).join('');
   return `
 <nav>
-  <a href="index.html" class="nav-logo">Navgraha Shakha <small>Astrology · Tarot · Psycho-Spiritual Coaching</small></a>
+  <a href="index.html" class="nav-logo">Navgraha Shakha <small>Astrology · Tarot · Cosmic Guidance</small></a>
   <ul class="nav-links">${links}</ul>
   <a href="contact.html" class="nav-cta">Book a Session</a>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
