@@ -57,7 +57,7 @@ function getFooter() {
   </div>
   <div class="footer-privacy" id="privacy">
     <strong style="color:var(--ink-dim);display:block;margin-bottom:0.5rem;font-size:0.75rem;letter-spacing:0.1em;">Privacy Policy</strong>
-    Navgraha Shakha collects personal information (name, email, phone, birth details) solely for the purpose of providing astrology, tarot, and spiritual coaching services. Your data is never sold, shared with third parties, or used for marketing without your consent. All session information and personal details are kept strictly confidential. By submitting a form on this website, you consent to Rushali / Navgraha Shakha storing and using your information to respond to your enquiry and deliver booked services. You may request deletion of your data at any time by writing to <a href="mailto:navgrahashakha@gmail.com">navgrahashakha@gmail.com</a>.
+    Navgraha Shakha collects personal information (name, email, phone, birth details) for the purpose of providing astrology, tarot, and spiritual coaching services, and to keep you informed about new offerings, updates, blog posts, and promotions from Navgraha Shakha. All session information and personal details are kept strictly confidential and are never sold or shared with third parties. By submitting a form on this website, you consent to Rushali / Navgraha Shakha storing and using your information to respond to your enquiry, deliver booked services, and send you relevant updates and marketing communications. You may opt out of marketing communications or request deletion of your data at any time by writing to <a href="mailto:navgrahashakha@gmail.com">navgrahashakha@gmail.com</a>.
   </div>
 </footer>`;
 }
