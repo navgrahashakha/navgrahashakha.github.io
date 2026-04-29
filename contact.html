@@ -100,28 +100,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="fade-in">
-      <form class="contact-form" onsubmit="handleSubmit(event)" id="contactForm">
+      <form class="contact-form" action="https://formspree.io/f/xwvyeqyp" method="POST" id="contactForm">
+        <input type="hidden" name="_subject" value="New Session Enquiry — Navgraha Shakha">
+        <input type="text" name="_gotcha" style="display:none">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">First Name</label>
-            <input type="text" class="form-input" placeholder="First name" required>
+            <input type="text" class="form-input" name="first_name" placeholder="First name" required>
           </div>
           <div class="form-group">
             <label class="form-label">Last Name</label>
-            <input type="text" class="form-input" placeholder="Last name">
+            <input type="text" class="form-input" name="last_name" placeholder="Last name">
           </div>
         </div>
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="your@email.com" required>
+          <input type="email" class="form-input" name="email" placeholder="your@email.com" required>
         </div>
         <div class="form-group">
           <label class="form-label">WhatsApp / Phone (optional)</label>
-          <input type="text" class="form-input" placeholder="+91 XXXXX XXXXX">
+          <input type="text" class="form-input" name="whatsapp" placeholder="+91 XXXXX XXXXX">
         </div>
         <div class="form-group">
           <label class="form-label">Service</label>
-          <select class="form-select">
+          <select class="form-select" name="service">
             <option value="">Select a service...</option>
             <option>Birth Chart Reading (60 min)</option>
             <option>Tarot Reading (30 min)</option>
@@ -136,21 +138,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="form-group">
           <label class="form-label">Date of Birth (for chart readings)</label>
-          <input type="text" class="form-input" placeholder="DD/MM/YYYY — include birth time if known">
+          <input type="text" class="form-input" name="birth_details" placeholder="DD/MM/YYYY — include birth time if known">
         </div>
         <div class="form-group">
           <label class="form-label">Your Message</label>
-          <textarea class="form-textarea" placeholder="Tell me a little about what you're seeking, or any questions you have..."></textarea>
+          <textarea class="form-textarea" name="message" placeholder="Tell me a little about what you're seeking, or any questions you have..."></textarea>
         </div>
         <div class="form-group">
           <label class="form-label">Preferred Session Format</label>
-          <select class="form-select">
+          <select class="form-select" name="session_format">
             <option>Online via Zoom</option>
             <option>Online via Google Meet</option>
             <option>No preference</option>
           </select>
         </div>
         <button type="submit" class="form-submit">Send Your Message →</button>
+        <p style="font-size:0.72rem;color:var(--ink-faint);margin-top:0.8rem;letter-spacing:0.05em;">You'll receive a confirmation email after submission. I'll respond within 24–48 hours.</p>
       </form>
       <div class="form-success" id="formSuccess">
         ✦ Thank you for reaching out.<br>
