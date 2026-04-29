@@ -9,7 +9,7 @@
 .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; max-width: 1100px; margin: 0 auto; }
 .about-image-frame {
   position: relative; width: 100%; aspect-ratio: 3/4;
-  background: var(--surface2); border: 1px solid rgba(196,176,232,0.16);
+  background: var(--surface2); border: 1px solid rgba(201,168,76,0.22);
   display: flex; align-items: center; justify-content: center; font-size: 5rem;
   color: var(--lavender-faint); overflow: hidden;
 }
@@ -21,23 +21,23 @@
 .photo-note { position:absolute;bottom:1rem;left:0;right:0;text-align:center;font-size:0.65rem;color:var(--ink-faint);letter-spacing:0.1em; }
 .about-text p { font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.95;color:var(--ink-dim);margin-bottom:1.5rem; }
 .about-text p strong { color:var(--ink);font-weight:600; }
-.about-stats { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(196,176,232,0.12); }
+.about-stats { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(201,168,76,0.18); }
 .stat-item { text-align:center; }
 .stat-num { font-family:'Cinzel',serif;font-size:2.2rem;font-weight:700;color:var(--gold);display:block; }
 .stat-label { font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.3rem; }
 
 .approach-section { background:var(--surface);padding:6rem 2rem;position:relative;z-index:1; }
 .approach-grid { max-width:1100px;margin:3rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem; }
-.approach-card { background:rgba(38,26,66,0.65);border:1px solid rgba(196,176,232,0.12);padding:2.5rem 2rem;transition:all 0.3s;box-shadow:0 2px 10px rgba(196,176,232,0.05); }
-.approach-card:hover { border-color:rgba(196,176,232,0.28);box-shadow:0 4px 20px rgba(196,176,232,0.08); }
-.approach-num { font-family:'Cinzel',serif;font-size:2.5rem;font-weight:700;color:rgba(196,176,232,0.12);margin-bottom:1rem;display:block; }
+.approach-card { background:rgba(52,22,88,0.75);border:1px solid rgba(201,168,76,0.18);padding:2.5rem 2rem;transition:all 0.3s;box-shadow:0 2px 10px rgba(196,176,232,0.05); }
+.approach-card:hover { border-color:rgba(201,168,76,0.3);box-shadow:0 4px 20px rgba(201,168,76,0.08); }
+.approach-num { font-family:'Cinzel',serif;font-size:2.5rem;font-weight:700;color:rgba(201,168,76,0.18);margin-bottom:1rem;display:block; }
 .approach-card h3 { font-family:'Cinzel',serif;font-size:1rem;font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:0.8rem; }
 .approach-card p { font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.8;color:var(--ink-dim); }
 
 .influences { padding:6rem 2rem;position:relative;z-index:1; }
 .influences-list { display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem; }
-.influence-item { display:flex;align-items:center;gap:1rem;padding:1.2rem 1.5rem;border:1px solid rgba(196,176,232,0.12);background:rgba(38,26,66,0.65);transition:border-color 0.3s;box-shadow:0 1px 8px rgba(196,176,232,0.05); }
-.influence-item:hover { border-color:rgba(196,176,232,0.25); }
+.influence-item { display:flex;align-items:center;gap:1rem;padding:1.2rem 1.5rem;border:1px solid rgba(201,168,76,0.18);background:rgba(52,22,88,0.75);transition:border-color 0.3s;box-shadow:0 1px 8px rgba(196,176,232,0.05); }
+.influence-item:hover { border-color:rgba(201,168,76,0.28); }
 .influence-item span:first-child { font-size:1.5rem; }
 .influence-item h4 { font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:0.2rem; }
 .influence-item p { font-size:0.8rem;color:var(--ink-faint);letter-spacing:0.04em; }
@@ -160,7 +160,7 @@
   </div>
 </div>
 
-<div style="background:var(--surface2);border-top:1px solid rgba(196,176,232,0.12);padding:5rem 2rem;text-align:center;position:relative;z-index:1;">
+<div style="background:var(--surface2);border-top:1px solid rgba(201,168,76,0.18);padding:5rem 2rem;text-align:center;position:relative;z-index:1;">
   <h2 style="font-family:'Cinzel',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:1rem;">Ready to Work Together?</h2>
   <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--ink-dim);margin-bottom:2.5rem;">Book a session and begin your journey inward.</p>
   <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
@@ -169,6 +169,6 @@
   </div>
 </div>
 
-<script>document.write(getFooter());</script>
+<script>document.write(getNewsletterBar() + getFooter() + getWhatsApp());</script>
 </body>
 </html>
