@@ -39,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   width: 100%;
   aspect-ratio: 3/4;
   overflow: hidden;
-  border: 1px solid rgba(212,168,64,0.25);
+  border: 1px solid rgba(107,47,160,0.2);
 }
 .about-photo-frame img {
   width: 100%; height: 100%;
@@ -56,7 +56,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* Corner ornaments */
 .corner-tl, .corner-tr, .corner-bl, .corner-br {
   position: absolute; width: 28px; height: 28px;
-  border-color: rgba(212,168,64,0.55); z-index: 2;
+  border-color: rgba(107,47,160,0.42); z-index: 2;
 }
 .corner-tl { top: -8px; left: -8px; border-top: 1px solid; border-left: 1px solid; }
 .corner-tr { top: -8px; right: -8px; border-top: 1px solid; border-right: 1px solid; }
@@ -75,7 +75,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .about-stats {
   display: grid; grid-template-columns: repeat(3,1fr);
   gap: 0; margin-top: 1.5rem;
-  border: 1px solid rgba(212,168,64,0.18);
+  border: 1px solid rgba(107,47,160,0.15);
   background: linear-gradient(135deg, rgba(58,18,96,0.75), rgba(42,13,80,0.85));
 }
 .stat-item {
@@ -130,7 +130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .about-tag {
   font-size: 0.95rem; letter-spacing: 0.2em; text-transform: uppercase;
   padding: 0.4rem 1rem;
-  border: 1px solid rgba(212,168,64,0.25);
+  border: 1px solid rgba(107,47,160,0.2);
   color: var(--ink-dim);
   background: rgba(212,168,64,0.04);
 }
@@ -144,7 +144,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .story-block {
   display: grid; grid-template-columns: 80px 1fr;
   gap: 2.5rem; padding: 3rem 0;
-  border-bottom: 1px solid rgba(212,168,64,0.08);
+  border-bottom: 1px solid rgba(107,47,160,0.08);
   align-items: start;
 }
 .story-block:last-child { border-bottom: none; }
@@ -186,7 +186,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .approach-card::before {
   content: '';
   position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212,168,64,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(107,47,160,0.3), transparent);
   opacity: 0; transition: opacity 0.35s;
 }
 .approach-card:hover { transform: translateY(-3px); border-color: rgba(212,168,64,0.32); }
@@ -217,7 +217,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   border: 1px solid rgba(212,168,64,0.15);
   transition: all 0.3s;
 }
-.lineage-item:hover { border-color: rgba(212,168,64,0.35); }
+.lineage-item:hover { border-color: rgba(107,47,160,0.28); }
 .lineage-icon { font-size: 1.6rem; flex-shrink: 0; }
 .lineage-item h4 {
   font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 600;
@@ -228,13 +228,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* ── CTA ── */
 .about-cta {
   background: linear-gradient(135deg, rgba(49,20,102,0.95), rgba(42,13,80,1));
-  border-top: 1px solid rgba(212,168,64,0.2);
+  border-top: 1px solid rgba(107,47,160,0.15);
   padding: 5rem 2rem; text-align: center; position: relative; z-index: 1;
 }
 .about-cta::before {
   content: '';
   position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212,168,64,0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(107,47,160,0.38), transparent);
 }
 .about-cta h2 {
   font-family: 'Cinzel', serif; font-size: clamp(1.4rem,3vw,2.2rem);
@@ -379,9 +379,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="approach-section">
   <div style="max-width:1100px;margin:0 auto;">
     <div style="font-size:0.65rem;font-weight:400;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;">
-      <span style="flex:0 0 40px;height:1px;background:linear-gradient(90deg,transparent,rgba(212,168,64,0.5));display:block;"></span>
+      <span style="flex:0 0 40px;height:1px;background:linear-gradient(90deg,transparent,rgba(107,47,160,0.38));display:block;"></span>
       How I Work
-      <span style="flex:0 0 40px;height:1px;background:linear-gradient(90deg,rgba(212,168,64,0.5),transparent);display:block;"></span>
+      <span style="flex:0 0 40px;height:1px;background:linear-gradient(90deg,rgba(107,47,160,0.38),transparent);display:block;"></span>
     </div>
     <h2 style="font-family:'Cinzel',serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:0;">My Approach</h2>
   </div>
@@ -408,9 +408,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="lineages-section">
   <div style="max-width:900px;margin:0 auto;">
     <div style="font-size:0.65rem;font-weight:400;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;">
-      <span style="flex:0 0 40px;height:1px;background:linear-gradient(90deg,transparent,rgba(212,168,64,0.5));display:block;"></span>
+      <span style="flex:0 0 40px;height:1px;background:linear-gradient(90deg,transparent,rgba(107,47,160,0.38));display:block;"></span>
       Foundations
-      <span style="flex:0 0 40px;height:1px;background:linear-gradient(90deg,rgba(212,168,64,0.5),transparent);display:block;"></span>
+      <span style="flex:0 0 40px;height:1px;background:linear-gradient(90deg,rgba(107,47,160,0.38),transparent);display:block;"></span>
     </div>
     <h2 style="font-family:'Cinzel',serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:600;letter-spacing:0.05em;color:var(--ink);margin-bottom:0.8rem;">Influences &amp; Lineages</h2>
     <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--ink-dim);margin-bottom:0;">The traditions and systems that have shaped my practice.</p>
